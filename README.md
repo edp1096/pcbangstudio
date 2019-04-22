@@ -1,8 +1,8 @@
 portable `vscode` creation toolset for using on public machine
 
-See or change `setup/install.cmd` as your taste
+Install - Download this repository then run `setup/install.cmd`
 
-Install - run `setup/install.cmd`
+See or change `setup/install.cmd` as your taste
 
 Run `vscode` - execute `run.exe` at root
 
