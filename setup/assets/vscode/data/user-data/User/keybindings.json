@@ -1,0 +1,39 @@
+// 키 바인딩을 이 파일에 넣어서 기본값을 덮어씁니다.
+[
+    {
+        "key": "alt+oem_3",
+        "command": "workbench.action.terminal.kill"
+    },
+    {
+        "key": "alt+b",
+        "command": "workbench.action.toggleActivityBarVisibility"
+    },
+    {
+        "key": "ctrl+alt+b",
+        "command": "workbench.action.toggleStatusbarVisibility"
+    },
+    {
+        "key": "shift+alt+b",
+        "command": "workbench.action.toggleTabsVisibility"
+    },
+    {
+        "key": "ctrl+win+w",
+        "command": "-workbench.action.toggleTabsVisibility"
+    },
+    {
+        "key": "ctrl+shift+alt+b",
+        "command": "editor.action.toggleMinimap"
+    },
+    {
+        "key": "alt+q",
+        "command": "workbench.action.output.toggleOutput"
+    },
+    {
+        "key": "ctrl+shift+u",
+        "command": "-workbench.action.output.toggleOutput"
+    },
+    {
+        "key": "ctrl+j ctrl+j",
+        "command": "settings.cycle.setWasmEnv"
+    }
+]

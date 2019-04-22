@@ -1,0 +1,243 @@
+{
+    "launcher.commands": [
+        {
+            "description": "NginX/PHP Start",
+            "executable": "nginx_start.bat",
+            "startIn": "%workspace%"
+        },
+        {
+            "description": "NginX/PHP Start with XDebug - localhost:10080",
+            "executable": "nginx_start_with_xdebug.bat",
+            "startIn": "%workspace%"
+        },
+        {
+            "description": "NginX/PHP Stop",
+            "executable": "nginx_stop.bat",
+            "startIn": "%workspace%"
+        },
+        {
+            "description": " "
+        },
+        {
+            "description": "PgSQL Start",
+            "executable": "pg_ctl.exe",
+            "parameters": "-D .\\pgdata -l pglog start",
+            "startIn": "%workspace%",
+        },
+        {
+            "description": "PgSQL Stop",
+            "executable": "pg_ctl.exe",
+            "parameters": "-D .\\pgdata stop",
+            "startIn": "%workspace%",
+        },
+        {
+            "description": "PgSQL Init db",
+            "executable": "initdb.exe",
+            "parameters": "-D .\\pgdata -U root -E UTF8 --no-locale",
+            "startIn": "%workspace%"
+        },
+        {
+            "description": "MariaDB Start",
+            "executable": "mysqld.exe",
+            "parameters": "--port=13306 --innodb-buffer-pool-size=48M --innodb_log_file_size=8M --character-set-server=utf8 --datadir=./mariadata",
+            "startIn": "%workspace%"
+        },
+        {
+            "description": "MariaDB Stop",
+            "executable": "taskkill",
+            "parameters": "/F /IM mysqld.exe > nul"
+        },
+        {
+            "description": "MariaDB Init db",
+            "executable": "xcopy",
+            "parameters": "%MARIADB_ROOT%\\data_init\\* .\\mariadata\\ /S /E",
+            "startIn": "%workspace%"
+        },
+        {
+            "description": "   "
+        },
+        {
+            "description": "Go - build to workspace",
+            "executable": "go_install.cmd",
+            "parameters": "%workspace%",
+            "startIn": "%item_path%",
+            "output": true
+        },
+        // {
+        //     "description": "Install to workspace with vendor",
+        //     "executable": "go_install_mod_vendor.cmd",
+        //     "parameters": "%workspace%",
+        //     "startIn": "%item_path%",
+        //     "output": true
+        // },
+        {
+            "description": "Go - mod init",
+            "executable": "mod_init.cmd",
+            "parameters": "%workspace%",
+            "startIn": "%item_path%",
+            "output": true
+        },
+        // {
+        //     "description": "module tidy",
+        //     "executable": "go",
+        //     "parameters": "mod tidy",
+        //     "startIn": "%item_path%",
+        //     "output": true
+        // },
+        // {
+        //     "description": "module tidy & create vendor",
+        //     "executable": "mod_tidy.cmd",
+        //     "parameters": "%workspace%",
+        //     "startIn": "%item_path%",
+        //     "output": true
+        // },
+        // {
+        //     "description": "Flush gocache & temp",
+        //     "executable": "flush_gopath.cmd",
+        //     "output": true
+        // },
+        // {
+        //     "description": "Go test && save test.log",
+        //     "executable": "go",
+        //     "parameters": "test ./... > test.log 2>&1",
+        //     "startIn": "%workspace%",
+        //     "output": false
+        // },
+        // {
+        //     "description": "Go race && save race.log",
+        //     "executable": "go",
+        //     "parameters": "run -race ./... > race.log 2>&1",
+        //     "startIn": "%workspace%",
+        //     "output": false
+        // },
+        {
+            "description": "    "
+        },
+        {
+            "description": "HeidiSQL",
+            "executable": "heidisql.exe",
+            "startIn": "%workspace%"
+        },
+        {
+            "description": "FileZilla",
+            "executable": "filezilla_run.cmd",
+            "startIn": "%workspace%"
+        },
+        {
+            "description": "PuTTY",
+            "executable": "putty.exe",
+            "startIn": "%workspace%"
+        },
+    ],
+    "settings.cycle": [
+        // 설정 변경 - Ctrl + j Ctrl + j
+        {
+            "id": "setWasmEnv",
+            "overrideWorkspaceSettings": false,
+            "values": [
+                {
+                    "window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}${appName}",
+                    "go.toolsEnvVars": {
+                        "GOARCH": "amd64",
+                        "GOOS": "windows"
+                    }
+                },
+                {
+                    "window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}${appName} for Golang/WASM",
+                    "go.toolsEnvVars": {
+                        "GOARCH": "wasm",
+                        "GOOS": "js"
+                    }
+                }
+            ]
+        }
+    ],
+    // "window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}${appName} for Golang",
+    "workbench.startupEditor": "none",
+    "workbench.activityBar.visible": true,
+    "editor.formatOnPaste": true,
+    "editor.minimap.enabled": false,
+    // Ctrl+Shift+T 도스창 실행 명령을 CMD에서 Powershell로 변경
+    "launcher.terminal": {
+        "executable": "cmd.exe",
+        "parameters": "/c start powershell -ExecutionPolicy Bypass -NoLogo -NoProfile -NoExit -Command set-alias ll dir; remove-item alias:curl; remove-item alias:wget; remove-item alias:cp; remove-item alias:mv; remove-item alias:rm; remove-item alias:rmdir; remove-item alias:mkdir; function prompt { $host.ui.rawui.WindowTitle = \"PS $pwd\";  $p = $(($pwd -split '\\\\')[-1] -join '\\') + '$ '; return $p }"
+    },
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "terminal.integrated.shellArgs.windows": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-NoLogo",
+        "-NoProfile",
+        "-NoExit",
+        "-Command",
+        "set-alias ll dir; remove-item alias:curl; remove-item alias:wget; remove-item alias:cp; remove-item alias:mv; remove-item alias:rm; remove-item alias:rmdir; function prompt { $host.ui.rawui.WindowTitle = \"PS $pwd\";  $p = $(($pwd -split '\\\\')[-1] -join '\\') + '$ '; if (-not (Test-Path env:GOENVADDED)) { Remove-Variable -name GOPATH; $env:GOBIN = \"$pwd\\bin\"; $env:GOENVADDED = \"exist\"; } return $p }"
+    ],
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "go.gotoSymbol.includeImports": true,
+    "window.zoomLevel": -1,
+    "editor.fontSize": 16.7,
+    "editor.fontFamily": "D2Coding ligature, Consolas, 'Courier New', monospace",
+    "workbench.sideBar.location": "right",
+    "editor.fontLigatures": true,
+    "breadcrumbs.enabled": true,
+    "window.titleBarStyle": "custom",
+    "files.autoSave": "afterDelay",
+    "workbench.statusBar.visible": true,
+    "workbench.settings.editor": "json",
+    "explorer.confirmDragAndDrop": false,
+    "vetur.format.defaultFormatter.js": "vscode-typescript",
+    "vetur.format.defaultFormatter.html": "prettyhtml",
+    "vetur.format.defaultFormatterOptions": {
+        "js-beautify-html": {},
+        "prettyhtml": {
+            "printWidth": 120,
+            "singleQuote": false
+        }
+    },
+    /*
+    PyLint 비활성 목록
+    missing-docstring,
+    no-member, 
+    invalid-name(UPPER_CASE)
+    */
+    "python.linting.pylintArgs": [
+        "--disable=C0111, E1101, C0103, E1129, W0702",
+        "--max-line-length=120"
+    ],
+    "python.formatting.autopep8Args": [
+        "--indent_size=4"
+    ],
+    "editor.minimap.side": "left",
+    "go.toolsEnvVars": {
+        "GOARCH": "amd64",
+        "GOOS": "windows"
+    },
+    "go.useLanguageServer": true,
+    "go.languageServerExperimentalFeatures": {
+        "format": false,
+        "autoComplete": false,
+        "rename": true,
+        "goToDefinition": false,
+        "hover": false,
+        "signatureHelp": false, // =함수(변수,변수) 이런 거
+        "goToTypeDefinition": false,
+        "goToImplementation": false,
+        "documentSymbols": false, // =outline
+        "workspaceSymbols": false,
+        "findReferences": false
+    },
+    "go.languageServerFlags": [
+        // "--use-global-cache",
+        // "--pprof",
+        // "127.0.0.1:6060"
+    ],
+    "go.docsTool": "gogetdoc",
+    "go.gocodeAutoBuild": true,
+    "editor.minimap.maxColumn": 70,
+    "window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}${appName}",
+    "git.autofetch": false,
+    "html.format.wrapLineLength": 1024,
+    "php.suggest.basic": false,
+    // "intelephense.format.enable": false
+}

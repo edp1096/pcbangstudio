@@ -1,0 +1,19 @@
+VSCode
+- Install D2Coding font before run
+
+tools/utils/mycmd
+- move_to_workspace.ps1 : workspace root for git cloning or then explorer.exe .\
+- setas_xxxx.ps1 : Set env GOOS, GOARCH for golang
+- iam_xxxx.cmd : Set env user name and email for git or github
+- opencv_env.ps1 : Set env for compile gocv codes
+
+PostgreSQL
+- Install vcredist in pgsql folder before run or init db
+
+Icon
+- Laura Reen (https://www.shareicon.net/author/laura-reen) / Creative Commons (Attribution 3.0 Unported)
+
+
+This is a tool-set only for me.
+
+Copyright (c) Robert Sung-wook Shin, All rights reserved. <http://enjoytools.net, edp1096@naver.com>
