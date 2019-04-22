@@ -1,6 +1,6 @@
 # VSCode Portable
 
-Portable `vscode` creation toolset for using on public `MS-Windows` machine
+Portable `vscode` creation toolset for using on public `MS-Windows` `amd64` machine
 
 Install - Download this repository then run `setup/install.cmd`
 
