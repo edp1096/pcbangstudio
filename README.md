@@ -1,4 +1,4 @@
-portable `vscode` creation toolset for using on public machine
+Portable `vscode` creation toolset for using on public machine
 
 Install - Download this repository then run `setup/install.cmd`
 
