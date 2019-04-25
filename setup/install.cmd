@@ -58,13 +58,22 @@ if not exist %cd%\tools md tools
 cd tools
 
 echo.
-echo ### Download Git
-curl.exe %silentcurl% -Lo portablegit.exe %download_url_git%
-if not exist %cd%\git md git
-cd git
-7za x ../portablegit.exe -aoa %silent7z%
-cd ..
-del portablegit.exe
+echo ### Git
+if exist %cd%\portablegit.exe (
+  set do_git=1
+  if exist %cd%\git rmdir git /q/s
+) else (
+  if not exist %cd%\git set do_git=1
+)
+if defined do_git (
+  curl.exe %silentcurl% -Lo portablegit.exe %download_url_git%
+  if not exist %cd%\git md git
+  cd git
+    7za x ../portablegit.exe -aoa %silent7z%
+  cd ..
+  del portablegit.exe
+)
+
 
 echo.
 echo ## Entering Tools/Languages
@@ -72,53 +81,98 @@ if not exist %cd%\langs md langs
 cd langs
 
 echo ### MinGW
-curl.exe %silentcurl% -Lo mingw.7z %download_url_mingw%
-7za x mingw.7z -aoa %silent7z%
-ren mingw64 mingw
-del mingw.7z
+if exist %cd%\mingw.7z (
+  set do_mingw=1
+  if exist %cd%\mingw rmdir mingw /q/s
+) else (
+  if not exist %cd%\mingw set do_mingw=1
+)
+if defined do_mingw (
+  curl.exe %silentcurl% -Lo mingw.7z %download_url_mingw%
+  7za x mingw.7z -aoa %silent7z%
+  ren mingw64 mingw
+  del mingw.7z
+)
 
 echo ### Go
-if not exist %cd%\go md go
-curl.exe %silentcurl% -Lo go.zip %download_url_golang%
-rem arc unarchive go.zip
-7za x go.zip -aoa %silent7z%
-del go.zip
+if exist %cd%\go.zip (
+  set do_go=1
+  if exist %cd%\go rmdir go /q/s
+) else (
+  if not exist %cd%\go set do_go=1
+)
+if defined do_go (
+  if not exist %cd%\go md go
+  curl.exe %silentcurl% -Lo go.zip %download_url_golang%
+  7za x go.zip -aoa %silent7z%
+  del go.zip
+)
 
 echo ### Nodejs
-curl.exe %silentcurl% -Lo nodejs.zip %download_url_nodejs%
-rem arc unarchive nodejs.zip
-7za x nodejs.zip -aoa %silent7z%
-del nodejs.zip
-for /f "tokens=1-4 delims=-" %%F IN ('dir /b /a:d "node*"') do ren "%%~F-%%~G-%%~H-%%~I" "%%~Fjs"
-md nodejs\npm-cache
-md nodejs\etc
-copy %pcbangstudio_root%\setup\assets\nodejs\etc\npmrc .\nodejs\etc /y 1>NUL
+if exist %cd%\nodejs.zip (
+  set do_nodejs=1
+  if exist %cd%\nodejs rmdir nodejs /q/s
+) else (
+  if not exist %cd%\nodejs set do_nodejs=1
+)
+if defined do_nodejs (
+  curl.exe %silentcurl% -Lo nodejs.zip %download_url_nodejs%
+  7za x nodejs.zip -aoa %silent7z%
+  del nodejs.zip
+  for /f "tokens=1-4 delims=-" %%F IN ('dir /b /a:d "node*"') do ren "%%~F-%%~G-%%~H-%%~I" "%%~Fjs"
+  md nodejs\npm-cache
+  md nodejs\etc
+  copy %pcbangstudio_root%\setup\assets\nodejs\etc\npmrc .\nodejs\etc /y 1>NUL
+)
 
 echo ### PHP
-if not exist %cd%\php md php
-cd php
-curl.exe %silentcurl% -Lo php.zip %download_url_php%
-7za x php.zip -aoa %silent7z%
-xcopy %pcbangstudio_root%\setup\assets\php\* .\ /y/e 1>NUL
-del php.zip
-cd ext
-curl.exe %silentcurl% -Lo php_xdebug.dll %download_url_xdebug%
-cd ..\..
+if exist %cd%\php\php.zip (
+  set do_php=1
+  if exist %cd%\php rmdir php /q/s
+) else (
+  if not exist %cd%\php set do_php=1
+)
+if defined do_php (
+  if not exist %cd%\php md php
+  cd php
+    curl.exe %silentcurl% -Lo php.zip %download_url_php%
+    7za x php.zip -aoa %silent7z%
+    xcopy %pcbangstudio_root%\setup\assets\php\* .\ /y/e 1>NUL
+    del php.zip
+    cd ext
+      curl.exe %silentcurl% -Lo php_xdebug.dll %download_url_xdebug%
+  cd ..\..
+)
 
 echo ### Python
-if not exist %cd%\python3 md python3
-cd python3
-curl.exe %silentcurl% -Lo python3.7z %download_url_python%
-7za x python3.7z -aoa %silent7z%
-del python3.7z
-cd ..
+if exist %cd%\python3\python3.7z (
+  set do_python=1
+  if exist %cd%\python3 rmdir python3 /q/s
+) else (
+  if not exist %cd%\python3 set do_python=1
+)
+if defined do_python (
+  if not exist %cd%\python3 md python3
+  cd python3
+    curl.exe %silentcurl% -Lo python3.7z %download_url_python%
+    7za x python3.7z -aoa %silent7z%
+    del python3.7z
+  cd ..
+)
 
 echo ### CMake
-curl.exe %silentcurl% -Lo cmake.zip %download_url_cmake%
-7za x cmake.zip -aoa %silent7z%
-del cmake.zip
-for /f "tokens=1-4 delims=-" %%F IN ('dir /b /a:d "cmake*"') do ren "%%~F-%%~G-%%~H-%%~I" "%%~F"
-
+if exist %cd%\cmake.zip (
+  set do_cmake=1
+  if exist %cd%\cmake rmdir cmake /q/s
+) else (
+  if not exist %cd%\cmake set do_cmake=1
+)
+if defined do_cmake (
+  curl.exe %silentcurl% -Lo cmake.zip %download_url_cmake%
+  7za x cmake.zip -aoa %silent7z%
+  del cmake.zip
+  for /f "tokens=1-4 delims=-" %%F IN ('dir /b /a:d "cmake*"') do ren "%%~F-%%~G-%%~H-%%~I" "%%~F"
+)
 
 cd %pcbangstudio_root%
 cd tools
@@ -135,59 +189,106 @@ xcopy %pcbangstudio_root%\setup\assets\mycmd .\ /y/e 1>NUL
 cd ..
 
 echo ## NginX
-curl.exe %silentcurl% -Lo nginx.zip %download_url_nginx%
-7za x nginx.zip -aoa %silent7z%
-del nginx.zip
-for /f "tokens=1-2 delims=-" %%F IN ('dir /b /a:d "nginx*"') do ren "%%~F-%%~G" "%%~F"
-cd nginx
-cd conf
-ren nginx.conf nginx.conf_orig
-cd ..
-xcopy %pcbangstudio_root%\setup\assets\nginx\* .\ /y/e 1>NUL
-cd ..
+if exist %cd%\nginx.zip (
+  set do_nginx=1
+  if exist %cd%\nginx rmdir nginx /q/s
+) else (
+  if not exist %cd%\nginx set do_nginx=1
+)
+if defined do_nginx (
+  curl.exe %silentcurl% -Lo nginx.zip %download_url_nginx%
+  7za x nginx.zip -aoa %silent7z%
+  del nginx.zip
+  for /f "tokens=1-2 delims=-" %%F IN ('dir /b /a:d "nginx*"') do ren "%%~F-%%~G" "%%~F"
+  cd nginx
+    cd conf
+      ren nginx.conf nginx.conf_orig
+    cd ..
+    xcopy %pcbangstudio_root%\setup\assets\nginx\* .\ /y/e 1>NUL
+  cd ..
+)
 
 echo ## HeidiSQL
-if not exist %cd%\heidisql md heidisql
-cd heidisql
-curl.exe %silentcurl% -Lo heidisql.zip %download_url_heidisql%
-7za x heidisql.zip -aoa %silent7z%
-del heidisql.zip
-cd ..
+if exist %cd%\heidisql\heidisql.zip (
+  set do_heidisql=1
+  if exist %cd%\heidisql rmdir heidisql /q/s
+) else (
+  if not exist %cd%\heidisql set do_heidisql=1
+)
+if defined do_heidisql (
+  if not exist %cd%\heidisql md heidisql
+  cd heidisql
+    curl.exe %silentcurl% -Lo heidisql.zip %download_url_heidisql%
+    7za x heidisql.zip -aoa %silent7z%
+    del heidisql.zip
+  cd ..
+)
 
 echo ## PUTTY
-if not exist %cd%\putty md putty
-cd putty
-curl.exe %silentcurl% -Lo putty.zip %download_url_putty%
-7za x putty.zip -aoa %silent7z%
-del putty.zip
-cd ..
+if exist %cd%\putty\putty.zip (
+  set do_putty=1
+  if exist %cd%\putty rmdir putty /q/s
+) else (
+  if not exist %cd%\putty set do_putty=1
+)
+if defined do_putty (
+  if not exist %cd%\putty md putty
+  cd putty
+    curl.exe %silentcurl% -Lo putty.zip %download_url_putty%
+    7za x putty.zip -aoa %silent7z%
+    del putty.zip
+  cd ..
+)
 
 echo ## Filezilla
-curl.exe %silentcurl% -Lo filezilla.zip %download_url_filezilla%
-7za x filezilla.zip -aoa %silent7z%
-del filezilla.zip
-for /f "tokens=1-2 delims=-" %%F IN ('dir /b /a:d "filezilla*"') do ren "%%~F-%%~G" "%%~F"
-cd filezilla
-xcopy %pcbangstudio_root%\setup\assets\filezilla\* .\ /y/e 1>NUL
-cd ..
+if exist %cd%\filezilla.zip (
+  set do_filezilla=1
+  if exist %cd%\filezilla rmdir filezilla /q/s
+) else (
+  if not exist %cd%\filezilla set do_filezilla=1
+)
+if defined do_filezilla (
+  curl.exe %silentcurl% -Lo filezilla.zip %download_url_filezilla%
+  7za x filezilla.zip -aoa %silent7z%
+  del filezilla.zip
+  for /f "tokens=1-2 delims=-" %%F IN ('dir /b /a:d "filezilla*"') do ren "%%~F-%%~G" "%%~F"
+  cd filezilla
+    xcopy %pcbangstudio_root%\setup\assets\filezilla\* .\ /y/e 1>NUL
+  cd ..
+)
 
 echo ## Notepad2
-if not exist %cd%\notepad2 md notepad2
-cd notepad2
-curl.exe %silentcurl% -Lo notepad2.zip %download_url_notepad2%
-7za x notepad2.zip -aoa %silent7z%
-copy %pcbangstudio_root%\setup\assets\notepad2\* .\ /y 1>NUL
-del notepad2.zip
-cd ..
+if exist %cd%\notepad2\notepad2.zip (
+  set do_notepad2=1
+  if exist %cd%\notepad2 rmdir notepad2 /q/s
+) else (
+  if not exist %cd%\notepad2 set do_notepad2=1
+)
+if defined do_notepad2 (
+  if not exist %cd%\notepad2 md notepad2
+  cd notepad2
+    curl.exe %silentcurl% -Lo notepad2.zip %download_url_notepad2%
+    7za x notepad2.zip -aoa %silent7z%
+    copy %pcbangstudio_root%\setup\assets\notepad2\* .\ /y 1>NUL
+    del notepad2.zip
+  cd ..
+)
 
 echo ## GNUWin
-if not exist %cd%\gnuwin md gnuwin
-cd gnuwin
-curl.exe %silentcurl% -Lo gnuwin.zip %download_url_gnuwin%
-7za x gnuwin.zip -aoa %silent7z%
-del gnuwin.zip
-cd ..
-
+if exist %cd%\gnuwin\gnuwin.zip (
+  set do_gnuwin=1
+  if exist %cd%\gnuwin rmdir gnuwin /q/s
+) else (
+  if not exist %cd%\gnuwin set do_gnuwin=1
+)
+if defined do_gnuwin (
+  if not exist %cd%\gnuwin md gnuwin
+  cd gnuwin
+    curl.exe %silentcurl% -Lo gnuwin.zip %download_url_gnuwin%
+    7za x gnuwin.zip -aoa %silent7z%
+    del gnuwin.zip
+  cd ..
+)
 
 cd %pcbangstudio_root%
 cd tools
@@ -197,34 +298,58 @@ if not exist %cd%\dbms md dbms
 cd dbms
 
 echo # MariaDB
-curl.exe %silentcurl% -Lo mariadb.zip %download_url_mariadb%
-7za x mariadb.zip -aoa %silent7z%
-for /f "tokens=1-3 delims=-" %%F IN ('dir /b /a:d "mariadb*"') do ren "%%~F-%%~G-%%~H" "%%~F"
-del mariadb.zip
-rem rd data /q/s
+if exist %cd%\mariadb.zip (
+  set do_mariadb=1
+  if exist %cd%\mariadb rmdir mariadb /q/s
+) else (
+  if not exist %cd%\mariadb set do_mariadb=1
+)
+if defined do_mariadb (
+  curl.exe %silentcurl% -Lo mariadb.zip %download_url_mariadb%
+  7za x mariadb.zip -aoa %silent7z%
+  for /f "tokens=1-3 delims=-" %%F IN ('dir /b /a:d "mariadb*"') do ren "%%~F-%%~G-%%~H" "%%~F"
+  del mariadb.zip
+  rem rd data /q/s
+)
 
 echo # PostgreSQL
-if not exist %cd%\pgsql md pgsql
-curl.exe %silentcurl% -Lo pgsql.zip %download_url_pgsql%
-7za x pgsql.zip -aoa %silent7z%
- del pgsql.zip
-cd pgsql
-rmdir "pgAdmin 4" /q/s
-rmdir doc /q/s
-rmdir symbols /q/s
-cd ..
+if exist %cd%\pgsql.zip (
+  set do_pgsql=1
+  if exist %cd%\pgsql rmdir pgsql /q/s
+) else (
+  if not exist %cd%\pgsql set do_pgsql=1
+)
+if defined do_pgsql (
+  rem if not exist %cd%\pgsql md pgsql
+  curl.exe %silentcurl% -Lo pgsql.zip %download_url_pgsql%
+  7za x pgsql.zip -aoa %silent7z%
+  del pgsql.zip
+  cd pgsql
+    rmdir "pgAdmin 4" /q/s
+    rmdir doc /q/s
+    rmdir symbols /q/s
+  cd ..
+)
 
 
 cd ..
 echo.
 echo # Download VSCode
-if not exist %cd%\vscode md vscode
-cd vscode
-curl.exe %silentcurl% -Lo vscode.zip %download_url_vscode%
-7za x vscode.zip -aoa %silent7z%
-del vscode.zip
-xcopy %pcbangstudio_root%\setup\assets\vscode\* .\ /y/e 1>NUL
-cd ..
+if exist %cd%\vscode\vscode.zip (
+  set do_vscode=1
+  if exist %cd%\vscode rmdir vscode /q/s
+) else (
+  if not exist %cd%\vscode set do_vscode=1
+)
+if defined do_vscode (
+  if not exist %cd%\vscode md vscode
+  cd vscode
+    curl.exe %silentcurl% -Lo vscode.zip %download_url_vscode%
+    7za x vscode.zip -aoa %silent7z%
+    del vscode.zip
+    xcopy %pcbangstudio_root%\setup\assets\vscode\* .\ /y/e 1>NUL
+  cd ..
+)
 
 
 cd %pcbangstudio_root%
