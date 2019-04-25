@@ -32,6 +32,7 @@ Portable `vscode` creation toolset for using on `MS-Windows` `amd64` machine at 
 * Notepad2
 * Others
     * mycmd - some `powershell` commands. please run on `integrated terminal` of `vscode`
+* VSCode
 
 ## Usage
 * Run `vscode` - execute `run.exe` at root
