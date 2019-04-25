@@ -1,6 +1,8 @@
 # VSCode Portable
 
-Portable `vscode` creation toolset for using on `MS-Windows` `amd64` machine at public place
+Portable `vscode` creation toolset for using on `MS-Windows 10 / amd64` machine at public place
+
+After installation, just zip & unzip then use it at public windows pc
 
 ## Install
 * Download this repository
@@ -13,9 +15,9 @@ Portable `vscode` creation toolset for using on `MS-Windows` `amd64` machine at 
 
 ## Tools
 * Git
-* Compiler, others
+* Compiler, others - All can be run on integrated terminal. Press Ctrl + `
     * MinGW
-    * Go
+    * Go - Press Shift + F2 > Module init / Shift + F2 > Install to workspace
     * NodeJS
     * PHP
     * Python 3.5.4
@@ -26,20 +28,19 @@ Portable `vscode` creation toolset for using on `MS-Windows` `amd64` machine at 
     * PostgreSQL - run with local db data which can be created at project root
         * Shift + F2 > PgSQL init db / Shift + F2 > PgSQL Start
     * HeidiSQL
-* NgiNX - Project root is html root instead of `nginx/html` folder
-* Filezilla
-* PuTTY
-* Notepad2
+* NgiNX - Press Shift + F2 . html root is current project root instead of `nginx/html` folder
+* Filezilla - Press Shift + F2
+* PuTTY - Press Shift + F2
+* Notepad2 - Use for edit command at `Filezilla`
 * Others
-    * mycmd - some `powershell` commands. please run on `integrated terminal` of `vscode`
+    * mycmd - some `powershell` commands. please try on `integrated terminal` of `vscode`
 * VSCode
 
 ## Usage
 * Run `vscode` - execute `run.exe` at root
 * Run `Launcher` in `vscode` - Shift + F2
-
-Each location of `AppData` and `UserProfile` and `Home` will be set to new place when run `vscode`
- - See `user` folder
+* Each location of `AppData` and `UserProfile` and `Home` will be set to separated places
+    * See `user` folder
 
 ## Update `VSCode`
 * <b>Don't click `Gear` icon > `download` or click `Help` > `Download update`</b>
