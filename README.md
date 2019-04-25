@@ -43,7 +43,7 @@ After installation, just zip & unzip then use it at public windows pc
     * See `user` folder
 
 ## Update `VSCode`
-* <b>Don't click `Gear` icon > `download` or click `Help` > `Download update`</b>
+* <b>Don't click `Gear` icon > `download` nor click `Help` > `Download update`</b>
 * exit `vscode`
 * move to `etc` folder
 * run `update_vscode.cmd`
