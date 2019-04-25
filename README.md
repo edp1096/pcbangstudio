@@ -49,5 +49,9 @@ After installation, just zip & unzip then use it at public windows pc
 * move to `etc` folder
 * run `update_vscode.cmd`
 
+## Update others
+* First, you should find download link from each websites
+* Modify `download_url_???` in `setup/install.cmd`
+
 ## Cleanup home, userprofile, tmp..
 * run `etc/clear_garbage.cmd`
