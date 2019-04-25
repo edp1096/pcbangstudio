@@ -27,6 +27,7 @@ After installation, just zip & unzip then use it at public windows pc
         * Shift + F2 > MairDB init db / Shift + F2 > MairDB Start
     * PostgreSQL - run with local db data which can be created at project root
         * Shift + F2 > PgSQL init db / Shift + F2 > PgSQL Start
+        * PgAdmin will be removed. I'm using `HeidiSQL` instead of it
     * HeidiSQL
 * NgiNX - Press Shift + F2 . html root is current project root instead of `nginx/html` folder
 * Filezilla - Press Shift + F2
