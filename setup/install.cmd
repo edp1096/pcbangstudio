@@ -163,7 +163,6 @@ del putty.zip
 cd ..
 
 echo ## Filezilla
-if not exist %cd%\filezilla md filezilla
 curl.exe %silentcurl% -Lo filezilla.zip %download_url_filezilla%
 7za x filezilla.zip -aoa %silent7z%
 del filezilla.zip
