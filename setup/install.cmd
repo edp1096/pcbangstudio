@@ -309,6 +309,8 @@ if defined do_mariadb (
   curl.exe %silentcurl% -Lo mariadb.zip %download_url_mariadb%
   7za x mariadb.zip -aoa %silent7z%
   for /f "tokens=1-3 delims=-" %%F IN ('dir /b /a:d "mariadb*"') do ren "%%~F-%%~G-%%~H" "%%~F"
+  md .\mariadb\data_init
+  xcopy %pcbangstudio_root%\setup\assets\mariadb\data_init .\mariadb\data_init /y/e 1>NUL
   del mariadb.zip
   rem rd data /q/s
 )
