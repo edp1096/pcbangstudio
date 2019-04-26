@@ -1,37 +1,0 @@
-2017-10-23 19:09:24 1444 [Note] Reading of all Master_info entries succeded
-2017-10-23 19:09:24 1444 [Note] Added new Master_info '' to hash table
-2017-10-23 19:09:24 1444 [Note] bin/mysqld.exe: ready for connections.
-Version: '10.2.8-MariaDB'  socket: ''  port: 13306  mariadb.org binary distribution
-0020reading@0020of@0020all@0020master_info@0020entries@0020succeded@000d.info'
-2017-09-12  3:41:29 832 [Warning] Neither --relay-log nor --relay-log-index were used; so replication may break when this MySQL server acts as a slave and has his hostname changed!! Please use '--log-basename=#' or '--relay-log=livingroom-pc-relay-bin' to avoid this problem.
-2017-09-12  3:41:29 832 [Note] Initialized Master_info from 'master-2017@002d09@002d12@0020@00203@003a33@003a14@00207800@0020@005bnote@005d@0020reading@0020of@0020all@0020master_info@0020entries@0020succeded@000d.info'
-2017-09-12  3:41:29 832 [Note] Added new Master_info '2017-09-12  3:33:14 7800 [Note] Reading of all Master_info entries succeded' to hash table
-2017-09-12  3:41:29 19452 [ERROR] Master '2017-09-12  3:33:14 7800 [Note] Reading of all Master_info entries succeded': Slave I/O: Fatal error: Invalid (empty) username when attempting to connect to the master server. Connection attempt terminated. Internal MariaDB error code: 1593
-2017-09-12  3:41:29 832 [Note] Started replication for '2017-09-12  3:33:14 7800 [Note] Reading of all Master_info entries succeded'
-2017-09-12  3:41:29 8720 [Note] Master '2017-09-12  3:33:14 7800 [Note] Reading of all Master_info entries succeded': Slave SQL thread initialized, starting replication in log 'FIRST' at position 0, relay log '.\livingroom-pc-relay-bin-2017@002d09@002d12@0020@00203@003a33@003a14@00207800@0020@005bnote@005d@0020reading@0020of@0020all@0020master_info@0020entries@0020succeded@000d.000001' position: 4
-2017-09-12  3:41:29 19452 [Note] Master '2017-09-12  3:33:14 7800 [Note] Reading of all Master_info entries succeded': Slave I/O thread killed while connecting to master
-2017-09-12  3:41:29 832 [Note] Reading Master_info: 'master-2017@002d09@002d12@0020@00203@003a33@003a14@00207800@0020@005bnote@005d@0020added@0020new@0020master_info@0020@0027@0027@0020to@0020hash@0020table@000d.info'  Relay_info:'relay-log-2017@002d09@002d12@0020@00203@003a33@003a14@00207800@0020@005bnote@005d@0020added@0020new@0020master_info@0020@0027@0027@0020to@0020hash@0020table@000d.info'
-2017-09-12  3:41:29 19452 [Note] Master '2017-09-12  3:33:14 7800 [Note] Reading of all Master_info entries succeded': Slave I/O thread exiting, read up to log 'FIRST', position 4
-2017-09-12  3:41:29 832 [Note] Initialized Master_info from 'master-2017@002d09@002d12@0020@00203@003a33@003a14@00207800@0020@005bnote@005d@0020added@0020new@0020master_info@0020@0027@0027@0020to@0020hash@0020table@000d.info'
-2017-09-12  3:41:29 832 [Note] Added new Master_info '2017-09-12  3:33:14 7800 [Note] Added new Master_info '' to hash table' to hash table
-2017-09-12  3:41:29 15332 [ERROR] Master '2017-09-12  3:33:14 7800 [Note] Added new Master_info '' to hash table': Slave I/O: Fatal error: Invalid (empty) username when attempting to connect to the master server. Connection attempt terminated. Internal MariaDB error code: 1593
-2017-09-12  3:41:29 832 [Note] Started replication for '2017-09-12  3:33:14 7800 [Note] Added new Master_info '' to hash table'
-2017-09-12  3:41:29 14112 [Note] Master '2017-09-12  3:33:14 7800 [Note] Added new Master_info '' to hash table': Slave SQL thread initialized, starting replication in log 'FIRST' at position 0, relay log '.\livingroom-pc-relay-bin-2017@002d09@002d12@0020@00203@003a33@003a14@00207800@0020@005bnote@005d@0020added@0020new@0020master_info@0020@0027@0027@0020to@0020hash@0020table@000d.000001' position: 4
-2017-09-12  3:41:29 15332 [Note] Master '2017-09-12  3:33:14 7800 [Note] Added new Master_info '' to hash table': Slave I/O thread killed while connecting to master
-2017-09-12  3:41:29 832 [Note] Reading Master_info: 'master-2017@002d09@002d12@0020@00203@003a33@003a14@00207800@0020@005bnote@005d@0020bin@002fmysqld@002eexe@003a@0020ready@0020for@0020connections@002e@000d.info'  Relay_info:'relay-log-2017@002d09@002d12@0020@00203@003a33@003a14@00207800@0020@005bnote@005d@0020bin@002fmysqld@002eexe@003a@0020ready@0020for@0020connections@002e@000d.info'
-2017-09-12  3:41:29 15332 [Note] Master '2017-09-12  3:33:14 7800 [Note] Added new Master_info '' to hash table': Slave I/O thread exiting, read up to log 'FIRST', position 4
-2017-09-12  3:41:29 832 [Note] Initialized Master_info from 'master-2017@002d09@002d12@0020@00203@003a33@003a14@00207800@0020@005bnote@005d@0020bin@002fmysqld@002eexe@003a@0020ready@0020for@0020connections@002e@000d.info'
-2017-09-12  3:41:29 832 [Note] Added new Master_info '2017-09-12  3:33:14 7800 [Note] bin/mysqld.exe: ready for connections.' to hash table
-2017-09-12  3:41:29 1188 [ERROR] Master '2017-09-12  3:33:14 7800 [Note] bin/mysqld.exe: ready for connections.': Slave I/O: Fatal error: Invalid (empty) username when attempting to connect to the master server. Connection attempt terminated. Internal MariaDB error code: 1593
-2017-09-12  3:41:29 832 [Note] Started replication for '2017-09-12  3:33:14 7800 [Note] bin/mysqld.exe: ready for connections.'
-2017-09-12  3:41:29 11448 [Note] Master '2017-09-12  3:33:14 7800 [Note] bin/mysqld.exe: ready for connections.': Slave SQL thread initialized, starting replication in log 'FIRST' at position 0, relay log '.\livingroom-pc-relay-bin-2017@002d09@002d12@0020@00203@003a33@003a14@00207800@0020@005bnote@005d@0020bin@002fmysqld@002eexe@003a@0020ready@0020for@0020connections@002e@000d.000001' position: 4
-2017-09-12  3:41:29 1188 [Note] Master '2017-09-12  3:33:14 7800 [Note] bin/mysqld.exe: ready for connections.': Slave I/O thread killed while connecting to master
-2017-09-12  3:41:29 832 [Note] Reading Master_info: 'master-version@003a@0020@002710@002e2@002e8@002dmariadb@0027@0020@0020socket@003a@0020@0027@0027@0020@0020port@003a@002013306@0020@0020mariadb@002eorg@0020binary@0020distribution@000d.info'  Relay_info:'relay-log-version@003a@0020@002710@002e2@002e8@002dmariadb@0027@0020@0020socket@003a@0020@0027@0027@0020@0020port@003a@002013306@0020@0020mariadb@002eorg@0020binary@0020distribution@000d.info'
-2017-09-12  3:41:29 1188 [Note] Master '2017-09-12  3:33:14 7800 [Note] bin/mysqld.exe: ready for connections.': Slave I/O thread exiting, read up to log 'FIRST', position 4
-2017-09-12  3:41:29 832 [ERROR] Failed to create a new master info file (file 'C:\Users\swshi_000\Desktop\pcbangstudio_sample\tools\servers\mariadb\data\master-version@003a@0020@002710@002e2@002e8@002dmariadb@0027@0020@0020socket@003a@0020@0027@0027@0020@0020port@003a@002013306@0020@0020mariadb@002eorg@0020binary@0020distribution@000d.info', errno 2)
-2017-09-12  3:41:29 832 [ERROR] Initialized Master_info from 'master-version@003a@0020@002710@002e2@002e8@002dmariadb@0027@0020@0020socket@003a@0020@0027@0027@0020@0020port@003a@002013306@0020@0020mariadb@002eorg@0020binary@0020distribution@000d.info' failed
-2017-09-12  3:41:29 832 [Note] Added new Master_info 'Version: '10.2.8-MariaDB'  socket: ''  port: 13306  mariadb.org binary distribution' to hash table
-2017-09-12  3:41:29 832 [Warning] Reading of some Master_info entries failed
-2017-09-12  3:41:29 832 [ERROR] Failed to initialize multi master structures
-2017-09-12  3:41:29 832 [ERROR] Aborting
-

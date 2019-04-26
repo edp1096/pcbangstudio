@@ -310,7 +310,8 @@ if defined do_mariadb (
   7za x mariadb.zip -aoa %silent7z%
   for /f "tokens=1-3 delims=-" %%F IN ('dir /b /a:d "mariadb*"') do ren "%%~F-%%~G-%%~H" "%%~F"
   md .\mariadb\data_init
-  xcopy %pcbangstudio_root%\setup\assets\mariadb\data_init .\mariadb\data_init /y/e 1>NUL
+  xcopy .\mariadb\data .\mariadb\data_init /y/e 1>NUL
+  del .\mariadb\data_init\ib* /q
   del mariadb.zip
   rem rd data /q/s
 )
