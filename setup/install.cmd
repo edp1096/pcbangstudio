@@ -15,11 +15,12 @@ set download_url_notepad2="https://github.com/zufuliu/notepad2/releases/download
 set download_url_gnuwin="https://www.dropbox.com/s/2q3x5o2wzug1hbc/gnuwin.zip?dl=1"
 set download_url_nginx="https://nginx.org/download/nginx-1.14.2.zip"
 
-rem set download_url_mariadb="https://downloads.mariadb.org/interstitial/mariadb-10.3.14/winx64-packages/mariadb-10.3.14-winx64.zip"
-set download_url_mariadb="https://downloads.mariadb.org/interstitial/mariadb-10.3.14/winx64-packages/mariadb-10.3.14-winx64.zip/from/http://ftp.kaist.ac.kr/mariadb/"
+set download_url_mariadb="https://downloads.mariadb.org/interstitial/mariadb-10.3.14/winx64-packages/mariadb-10.3.14-winx64.zip"
+rem set download_url_mariadb="https://downloads.mariadb.org/interstitial/mariadb-10.3.14/winx64-packages/mariadb-10.3.14-winx64.zip/from/http://ftp.kaist.ac.kr/mariadb/"
 set download_url_pgsql="http://sbp.enterprisedb.com/getfile.jsp?fileid=11456&_ga=2.250821382.1635364127.1555943192-1012790724.1555943192"
 
 set download_url_mingw="https://sourceforge.net/projects/mingw-w64/files/Toolchains targetting Win64/Personal Builds/mingw-builds/8.1.0/threads-posix/seh/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z/download"
+rem set download_url_mingw="https://sourceforge.mirrorservice.org/m/mi/mingw-w64/Toolchains%%20targetting%%20Win64/Personal%%20Builds/mingw-builds/8.1.0/threads-posix/seh/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z"
 set download_url_golang="https://dl.google.com/go/go1.12.4.windows-amd64.zip"
 set download_url_nodejs="https://nodejs.org/dist/v10.15.3/node-v10.15.3-win-x64.zip"
 set download_url_php="https://windows.php.net/downloads/releases/php-7.2.17-nts-Win32-VC15-x64.zip"

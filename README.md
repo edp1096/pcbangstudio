@@ -52,6 +52,9 @@ After installation, just zip & unzip then use it at public windows pc
 ## Update others
 * First, you should find download link from each websites
 * Modify `download_url_???` in `setup/install.cmd`
+* Remove existing target tool folder
+* Remove `user` Folder or rename it for restore data
+* Execute `setup/install.cmd` again
 
 ## Cleanup home, userprofile, tmp..
 * run `etc/clear_garbage.cmd`
