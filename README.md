@@ -4,6 +4,8 @@ Portable `vscode` creation toolset for using on `MS-Windows 10 / amd64` machine 
 
 After installation, just zip & unzip then use it at public windows pc
 
+[![pcbangstudio](https://img.youtube.com/vi/fNm3Kd-UASM/0.jpg)](https://www.youtube.com/watch?v=fNm3Kd-UASM)
+
 ## Install
 * Download this repository
 * Run `cmd` then move to unziped repository path
