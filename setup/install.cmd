@@ -25,7 +25,9 @@ set download_url_mingw="https://sourceforge.net/projects/mingw-w64/files/Toolcha
 rem set download_url_mingw="https://sourceforge.mirrorservice.org/m/mi/mingw-w64/Toolchains%%20targetting%%20Win64/Personal%%20Builds/mingw-builds/8.1.0/threads-posix/seh/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z"
 set download_url_golang="https://dl.google.com/go/go1.12.4.windows-amd64.zip"
 set download_url_nodejs="https://nodejs.org/dist/v10.15.3/node-v10.15.3-win-x64.zip"
-set download_url_php="https://windows.php.net/downloads/releases/php-7.2.17-nts-Win32-VC15-x64.zip"
+rem When PHP guys release new version, the path of before last version have changed to archive
+rem set download_url_php="https://windows.php.net/downloads/releases/php-7.2.18-nts-Win32-VC15-x64.zip"
+set download_url_php="https://windows.php.net/downloads/releases/archives/php-7.2.17-nts-Win32-VC15-x64.zip"
 set download_url_xdebug="https://xdebug.org/files/php_xdebug-2.7.1-7.2-vc15-nts-x86_64.dll"
 set download_url_python="https://www.dropbox.com/s/sjlvd69abjdh02x/python354.7z?dl=1"
 set download_url_cmake="https://github.com/Kitware/CMake/releases/download/v3.14.2/cmake-3.14.2-win64-x64.zip"
