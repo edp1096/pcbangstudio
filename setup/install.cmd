@@ -188,10 +188,12 @@ if not exist %cd%\utils md utils
 cd utils
 
 echo ## mycmd
-md mycmd
-cd mycmd
-xcopy %pcbangstudio_root%\setup\assets\mycmd .\ /y/e 1>NUL
-cd ..
+if not exist mycmd (
+  md mycmd
+  cd mycmd
+  xcopy %pcbangstudio_root%\setup\assets\mycmd .\ /y/e 1>NUL
+  cd ..
+)
 
 echo ## NginX
 if exist %cd%\nginx.zip (
