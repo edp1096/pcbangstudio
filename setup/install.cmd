@@ -10,6 +10,8 @@ set silentcurl=--progress-bar
 set download_url_git="https://github.com/git-for-windows/git/releases/download/v2.21.0.windows.1/PortableGit-2.21.0-64-bit.7z.exe"
 set download_url_heidisql="https://www.heidisql.com/downloads/releases/HeidiSQL_10.1_64_Portable.zip"
 set download_url_putty="https://the.earth.li/~sgtatham/putty/latest/w64/putty.zip"
+rem Hangul PuTTY
+rem set download_url_putty="https://github.com/teamnop/HPuTTY/releases/download/p0.66-t027-h004/putty.zip"
 rem Filezilla 3.41.2 have a problem which cannot set to local path via config/filezilla.xml
 rem set download_url_filezilla="https://download.filezilla-project.org/client/FileZilla_3.41.2_win64.zip"
 set download_url_filezilla="https://download.filezilla-project.org/client/FileZilla_3.13.1_win64.zip"
