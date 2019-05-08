@@ -92,9 +92,11 @@ if exist %cd%\git.zip (
 )
 if defined do_git (
   if not exist %cd%\git md git
-  curl.exe %silentcurl% -Lo git.zip %download_url_git%
-  7za x git.zip -aoa %silent7z%
-  del git.zip
+  cd git
+    curl.exe %silentcurl% -Lo git.zip %download_url_git%
+    7za x git.zip -aoa %silent7z%
+    del git.zip
+  cd ..
 )
 
 echo.
