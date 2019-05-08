@@ -7,11 +7,13 @@ set silent7z=-bso0
 rem set silentcurl=-s
 set silentcurl=--progress-bar
 
-set download_url_git="https://github.com/git-for-windows/git/releases/download/v2.21.0.windows.1/PortableGit-2.21.0-64-bit.7z.exe"
+rem set download_url_git="https://github.com/git-for-windows/git/releases/download/v2.21.0.windows.1/PortableGit-2.21.0-64-bit.7z.exe"
+rem Use MinGit-busybox instead above
+set download_url_git="https://github.com/git-for-windows/git/releases/download/v2.21.0.windows.1/MinGit-2.21.0-busybox-64-bit.zip"
 set download_url_heidisql="https://www.heidisql.com/downloads/releases/HeidiSQL_10.1_64_Portable.zip"
-set download_url_putty="https://the.earth.li/~sgtatham/putty/latest/w64/putty.zip"
+rem set download_url_putty="https://the.earth.li/~sgtatham/putty/latest/w64/putty.zip"
 rem Hangul PuTTY
-rem set download_url_putty="https://github.com/teamnop/HPuTTY/releases/download/p0.66-t027-h004/putty.zip"
+set download_url_putty="https://github.com/teamnop/HPuTTY/releases/download/p0.66-t027-h004/putty.zip"
 rem Filezilla 3.41.2 have a problem which cannot set to local path via config/filezilla.xml
 rem set download_url_filezilla="https://download.filezilla-project.org/client/FileZilla_3.41.2_win64.zip"
 set download_url_filezilla="https://download.filezilla-project.org/client/FileZilla_3.13.1_win64.zip"
@@ -23,8 +25,8 @@ set download_url_mariadb="https://downloads.mariadb.org/interstitial/mariadb-10.
 rem set download_url_mariadb="https://downloads.mariadb.org/interstitial/mariadb-10.3.14/winx64-packages/mariadb-10.3.14-winx64.zip/from/http://ftp.kaist.ac.kr/mariadb/"
 set download_url_pgsql="http://sbp.enterprisedb.com/getfile.jsp?fileid=11456&_ga=2.250821382.1635364127.1555943192-1012790724.1555943192"
 
-set download_url_mingw="https://sourceforge.net/projects/mingw-w64/files/Toolchains targetting Win64/Personal Builds/mingw-builds/8.1.0/threads-posix/seh/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z/download"
-rem set download_url_mingw="https://sourceforge.mirrorservice.org/m/mi/mingw-w64/Toolchains%%20targetting%%20Win64/Personal%%20Builds/mingw-builds/8.1.0/threads-posix/seh/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z"
+rem set download_url_mingw="https://sourceforge.net/projects/mingw-w64/files/Toolchains targetting Win64/Personal Builds/mingw-builds/8.1.0/threads-posix/seh/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z/download"
+set download_url_mingw="https://sourceforge.mirrorservice.org/m/mi/mingw-w64/Toolchains%%20targetting%%20Win64/Personal%%20Builds/mingw-builds/8.1.0/threads-posix/seh/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z"
 set download_url_golang="https://dl.google.com/go/go1.12.4.windows-amd64.zip"
 set download_url_nodejs="https://nodejs.org/dist/v10.15.3/node-v10.15.3-win-x64.zip"
 rem When PHP guys release new version, the path of before last version have changed to archive
@@ -64,23 +66,36 @@ echo # Entering Tools
 if not exist %cd%\tools md tools
 cd tools
 
-echo.
+rem echo.
+rem echo ### Git
+rem if exist %cd%\portablegit.exe (
+rem   set do_git=1
+rem   if exist %cd%\git rmdir git /q/s
+rem ) else (
+rem   if not exist %cd%\git set do_git=1
+rem )
+rem if defined do_git (
+rem   curl.exe %silentcurl% -Lo portablegit.exe %download_url_git%
+rem   if not exist %cd%\git md git
+rem   cd git
+rem     7za x ../portablegit.exe -aoa %silent7z%
+rem   cd ..
+rem   del portablegit.exe
+rem )
+
 echo ### Git
-if exist %cd%\portablegit.exe (
+if exist %cd%\git.zip (
   set do_git=1
-  if exist %cd%\git rmdir git /q/s
+  if exist %cd%\git rmdir go /q/s
 ) else (
   if not exist %cd%\git set do_git=1
 )
 if defined do_git (
-  curl.exe %silentcurl% -Lo portablegit.exe %download_url_git%
   if not exist %cd%\git md git
-  cd git
-    7za x ../portablegit.exe -aoa %silent7z%
-  cd ..
-  del portablegit.exe
+  curl.exe %silentcurl% -Lo git.zip %download_url_git%
+  7za x git.zip -aoa %silent7z%
+  del git.zip
 )
-
 
 echo.
 echo ## Entering Tools/Languages
@@ -431,8 +446,8 @@ echo ### disableligatures
 Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension CoenraadS.disableligatures
 echo ### go
 Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension ms-vscode.Go
-rem echo ### vetur
-rem Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension octref.vetur
+echo ### vetur
+Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension octref.vetur
 echo ### postgres
 Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension ckolkman.vscode-postgres
 echo ### rest-client

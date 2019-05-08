@@ -22,7 +22,7 @@ cd %VSC_ROOT%
 
 rem git path
 cd ..\git
-set "PATH=%cd%;%cd%\cmd;%PATH%"
+set "PATH=%cd%;%cd%\cmd;%cd%\mingw64\bin;%cd%\usr\bin;%PATH%"
 
 rem goroot path
 cd ..\langs\go
