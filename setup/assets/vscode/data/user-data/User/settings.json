@@ -160,7 +160,7 @@
     // Ctrl+Shift+T 도스창 실행 명령을 CMD에서 Powershell로 변경
     "launcher.terminal": {
         "executable": "cmd.exe",
-        "parameters": "/c start powershell -ExecutionPolicy Bypass -NoLogo -NoProfile -NoExit -Command set-alias ll dir; remove-item alias:curl; remove-item alias:wget; remove-item alias:cp; remove-item alias:mv; remove-item alias:rm; remove-item alias:rmdir; remove-item alias:mkdir; function prompt { $host.ui.rawui.WindowTitle = \"PS $pwd\";  $p = $(($pwd -split '\\\\')[-1] -join '\\') + '$ '; return $p }"
+        "parameters": "/c start powershell -ExecutionPolicy Bypass -NoLogo -NoProfile -NoExit -Command set-alias ll dir; remove-item alias:curl; remove-item alias:wget; remove-item alias:cp; remove-item alias:mv; remove-item alias:rm; remove-item alias:rmdir; function prompt { $host.ui.rawui.WindowTitle = \"PS $pwd\";  $p = $(($pwd -split '\\\\')[-1] -join '\\') + '$ '; return $p }"
     },
     "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
     "terminal.integrated.shellArgs.windows": [
