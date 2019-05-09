@@ -338,7 +338,13 @@ if defined do_mariadb (
   xcopy .\mariadb\data .\mariadb\data_init /y/e 1>NUL
   del .\mariadb\data_init\ib* /q
   del mariadb.zip
-  rem rd data /q/s
+  rd mariadb\data /q/s
+  cd mariadb\bin
+    for /f %%F in ('dir . /b /a-d ^| findstr /vile "mysql.exe mysqld.exe mysqldump.exe"') do (del "%%F")
+    for /f %%D in ('dir /b /ad ^| findstr /vile "mysql.exe mysqld.exe mysqldump.exe"') do (rmdir "%%D"/q/s)
+    cd ..
+  rmdir lib /q/s
+  cd..
 )
 
 echo # PostgreSQL
