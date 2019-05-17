@@ -9,7 +9,7 @@ cd ..\tools\vscode
 
 call del_vscode_bin.cmd
 
-..\utils\notgnu\curl.exe -Lo vscode.zip https://go.microsoft.com/fwlink/?Linkid=850641
+..\utils\gnuwin\curl.exe -Lo vscode.zip https://go.microsoft.com/fwlink/?Linkid=850641
 
 ..\utils\gnuwin\unzip.exe vscode.zip
 
