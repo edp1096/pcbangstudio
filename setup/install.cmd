@@ -465,10 +465,10 @@ rem Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --us
 rem echo ### python
 rem Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension ms-python.python
 
-rem echo ### intelephense
-rem Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension bmewburn.vscode-intelephense-client
-echo ### tenkawa-php
-Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension tsufeki.tenkawa-php
+echo ### intelephense
+Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension bmewburn.vscode-intelephense-client
+rem echo ### tenkawa-php
+rem Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension tsufeki.tenkawa-php
 echo ### php-fmt
 Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension kokororin.vscode-phpfmt
 

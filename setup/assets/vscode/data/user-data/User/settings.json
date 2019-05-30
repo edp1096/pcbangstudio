@@ -240,5 +240,5 @@
     "html.format.wrapLineLength": 1024,
     "php.suggest.basic": false,
     "phpfmt.php_bin": "\"php.exe\"",
-    // "intelephense.format.enable": false
+    "intelephense.format.enable": false
 }
