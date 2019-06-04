@@ -120,6 +120,8 @@ set "GOCACHE=%cd%"
 
 cd %VSC_ROOT%
 
+RunHiddenConsole gocode-gomod -s -cache
+
 rem git ssl cert disable
 git config --system http.sslverify false
 
@@ -151,6 +153,7 @@ go clean -cache
 del ..\..\user\gocache\log.txt
 
 rem vscode 종료 시, 상주하는 프로세스 모두 종료
+taskkill /F /IM gocode-gomod.exe > nul
 taskkill /F /IM nginx.exe > nul
 taskkill /F /IM php.exe > nul
 taskkill /F /IM php-cgi.exe > nul
