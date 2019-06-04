@@ -213,7 +213,7 @@
         "GOARCH": "amd64",
         "GOOS": "windows"
     },
-    "go.useLanguageServer": true,
+    "go.useLanguageServer": false,
     "go.languageServerExperimentalFeatures": {
         "format": false,
         "autoComplete": false,
@@ -227,18 +227,17 @@
         "workspaceSymbols": false,
         "findReferences": false
     },
-    "go.languageServerFlags": [
-        // "--use-global-cache",
-        // "--pprof",
-        // "127.0.0.1:6060"
-    ],
+    "go.languageServerFlags": [],
     "go.docsTool": "gogetdoc",
+    "go.formatTool": "goimports",
     "go.gocodeAutoBuild": true,
     "editor.minimap.maxColumn": 70,
     "window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}${appName}",
     "git.autofetch": false,
     "html.format.wrapLineLength": 1024,
     "php.suggest.basic": false,
+    "intelephense.format.enable": false,
     "phpfmt.php_bin": "\"php.exe\"",
-    "intelephense.format.enable": false
+    "phpfmt.psr1": true,
+    "phpfmt.psr2": false
 }
