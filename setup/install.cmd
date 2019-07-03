@@ -9,29 +9,31 @@ set silentcurl=--progress-bar
 
 rem set download_url_git="https://github.com/git-for-windows/git/releases/download/v2.21.0.windows.1/PortableGit-2.21.0-64-bit.7z.exe"
 rem Use MinGit-busybox instead above
-set download_url_git="https://github.com/git-for-windows/git/releases/download/v2.21.0.windows.1/MinGit-2.21.0-busybox-64-bit.zip"
-set download_url_heidisql="https://www.heidisql.com/downloads/releases/HeidiSQL_10.1_64_Portable.zip"
-rem set download_url_putty="https://the.earth.li/~sgtatham/putty/latest/w64/putty.zip"
-rem Hangul PuTTY
-set download_url_putty="https://github.com/teamnop/HPuTTY/releases/download/p0.66-t027-h004/putty.zip"
+set download_url_git="https://github.com/git-for-windows/git/releases/download/v2.22.0.windows.1/MinGit-2.22.0-busybox-64-bit.zip"
+set download_url_heidisql="https://www.heidisql.com/downloads/releases/HeidiSQL_10.2_64_Portable.zip"
+rem PuTTY
+set download_url_putty="https://the.earth.li/~sgtatham/putty/latest/w64/putty.zip"
+REM set download_url_putty="https://github.com/teamnop/HPuTTY/releases/download/p0.66-t027-h004/putty.zip"
 rem Filezilla 3.41.2 have a problem which cannot set to local path via config/filezilla.xml
 rem set download_url_filezilla="https://download.filezilla-project.org/client/FileZilla_3.41.2_win64.zip"
 set download_url_filezilla="https://download.filezilla-project.org/client/FileZilla_3.13.1_win64.zip"
 set download_url_notepad2="https://github.com/zufuliu/notepad2/releases/download/v4.19.04r2016/Notepad2_x64_v4.19.04r2016.zip"
 set download_url_gnuwin="https://www.dropbox.com/s/2q3x5o2wzug1hbc/gnuwin.zip?dl=1"
-set download_url_nginx="https://nginx.org/download/nginx-1.14.2.zip"
+set download_url_nginx="https://nginx.org/download/nginx-1.16.0.zip"
 
-set download_url_mariadb="https://downloads.mariadb.org/interstitial/mariadb-10.3.14/winx64-packages/mariadb-10.3.14-winx64.zip"
-rem set download_url_mariadb="https://downloads.mariadb.org/interstitial/mariadb-10.3.14/winx64-packages/mariadb-10.3.14-winx64.zip/from/http://ftp.kaist.ac.kr/mariadb/"
-set download_url_pgsql="http://sbp.enterprisedb.com/getfile.jsp?fileid=11456&_ga=2.250821382.1635364127.1555943192-1012790724.1555943192"
+REM set download_url_mariadb="https://downloads.mariadb.org/interstitial/mariadb-10.4.6/winx64-packages/mariadb-10.4.6-winx64.zip/from/http://ftp.kaist.ac.kr/mariadb/"
+set download_url_mariadb="https://downloads.mariadb.org/interstitial/mariadb-10.4.6/winx64-packages/mariadb-10.4.6-winx64.zip"
+REM set download_url_pgsql="http://sbp.enterprisedb.com/getfile.jsp?fileid=11456&_ga=2.250821382.1635364127.1555943192-1012790724.1555943192"
+set download_url_pgsql="http://sbp.enterprisedb.com/getfile.jsp?fileid=11688&_ga=2.77591319.301896687.1562140204-147855857.1562140204"
 
-rem set download_url_mingw="https://sourceforge.net/projects/mingw-w64/files/Toolchains targetting Win64/Personal Builds/mingw-builds/8.1.0/threads-posix/seh/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z/download"
-set download_url_mingw="https://sourceforge.mirrorservice.org/m/mi/mingw-w64/Toolchains%%20targetting%%20Win64/Personal%%20Builds/mingw-builds/8.1.0/threads-posix/seh/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z"
-set download_url_golang="https://dl.google.com/go/go1.12.4.windows-amd64.zip"
-set download_url_nodejs="https://nodejs.org/dist/v10.15.3/node-v10.15.3-win-x64.zip"
+set download_url_mingw="https://sourceforge.net/projects/mingw-w64/files/Toolchains targetting Win64/Personal Builds/mingw-builds/8.1.0/threads-posix/seh/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z/download"
+REM set download_url_mingw="https://sourceforge.mirrorservice.org/m/mi/mingw-w64/Toolchains%%20targetting%%20Win64/Personal%%20Builds/mingw-builds/8.1.0/threads-posix/seh/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z"
+set download_url_golang="https://dl.google.com/go/go1.12.6.windows-amd64.zip"
+set download_url_nodejs="https://nodejs.org/dist/v10.16.0/node-v10.16.0-win-x64.zip"
 rem When PHP guys release new version, the path of before last version have changed to archive
 rem set download_url_php="https://windows.php.net/downloads/releases/php-7.2.18-nts-Win32-VC15-x64.zip"
-set download_url_php="https://windows.php.net/downloads/releases/archives/php-7.2.17-nts-Win32-VC15-x64.zip"
+rem set download_url_php="https://windows.php.net/downloads/releases/archives/php-7.2.19-nts-Win32-VC15-x64.zip"
+set download_url_php="https://windows.php.net/downloads/releases/archives/php-7.3.6-nts-Win32-VC15-x64.zip"
 set download_url_xdebug="https://xdebug.org/files/php_xdebug-2.7.1-7.2-vc15-nts-x86_64.dll"
 set download_url_python="https://www.dropbox.com/s/sjlvd69abjdh02x/python354.7z?dl=1"
 set download_url_cmake="https://github.com/Kitware/CMake/releases/download/v3.14.2/cmake-3.14.2-win64-x64.zip"
@@ -456,27 +458,25 @@ Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-d
 rem echo ### postgres
 rem Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension ckolkman.vscode-postgres
 
-echo ### vetur
-Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension octref.vetur
-echo ### go
-Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension ms-vscode.Go
+REM echo ### vetur
+REM Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension octref.vetur
+REM echo ### go
+REM Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension ms-vscode.Go
 rem echo ### asp
 rem Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension jtjoo.classic-asp-html
 rem echo ### python
 rem Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension ms-python.python
 
-echo ### intelephense
-Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension bmewburn.vscode-intelephense-client
-rem echo ### tenkawa-php
-rem Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension tsufeki.tenkawa-php
-echo ### php-fmt
-Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension kokororin.vscode-phpfmt
+REM echo ### intelephense
+REM Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension bmewburn.vscode-intelephense-client
+REM echo ### php-fmt
+REM Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension kokororin.vscode-phpfmt
 
-echo ### css-compact
-Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension jsonchou.css-compact
+REM echo ### css-compact
+REM Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension jsonchou.css-compact
 
-echo ### rest-client
-Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension humao.rest-client
+REM echo ### rest-client
+REM Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension humao.rest-client
 echo ### git history-diff
 Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension huizhou.githd
 echo ### settings-cycler

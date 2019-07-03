@@ -233,11 +233,12 @@
     "go.gocodeAutoBuild": true,
     "editor.minimap.maxColumn": 70,
     "window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}${appName}",
-    "git.autofetch": false,
+    "git.autofetch": true,
     "html.format.wrapLineLength": 1024,
     "php.suggest.basic": false,
     "intelephense.format.enable": false,
     "phpfmt.php_bin": "\"php.exe\"",
     "phpfmt.psr1": true,
-    "phpfmt.psr2": false
+    "phpfmt.psr2": false,
+    "workbench.iconTheme": "vscode-icons"
 }
