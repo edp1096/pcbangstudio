@@ -21,8 +21,8 @@ set download_url_notepad2="https://github.com/zufuliu/notepad2/releases/download
 set download_url_gnuwin="https://www.dropbox.com/s/2q3x5o2wzug1hbc/gnuwin.zip?dl=1"
 set download_url_nginx="https://nginx.org/download/nginx-1.16.0.zip"
 
-REM set download_url_mariadb="https://downloads.mariadb.org/interstitial/mariadb-10.4.6/winx64-packages/mariadb-10.4.6-winx64.zip/from/http://ftp.kaist.ac.kr/mariadb/"
-set download_url_mariadb="https://downloads.mariadb.org/interstitial/mariadb-10.4.6/winx64-packages/mariadb-10.4.6-winx64.zip"
+REM set download_url_mariadb="https://downloads.mariadb.org/interstitial/mariadb-10.3.16/winx64-packages/mariadb-10.3.16-winx64.zip/from/http%3A//ftp.kaist.ac.kr/mariadb/"
+set download_url_mariadb="REM set download_url_mariadb="https://downloads.mariadb.org/interstitial/mariadb-10.3.16/winx64-packages/mariadb-10.3.16-winx64.zip""
 REM set download_url_pgsql="http://sbp.enterprisedb.com/getfile.jsp?fileid=11456&_ga=2.250821382.1635364127.1555943192-1012790724.1555943192"
 set download_url_pgsql="http://sbp.enterprisedb.com/getfile.jsp?fileid=11688&_ga=2.77591319.301896687.1562140204-147855857.1562140204"
 
