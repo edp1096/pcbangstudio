@@ -36,7 +36,8 @@ rem set download_url_php="https://windows.php.net/downloads/releases/archives/ph
 set download_url_php="https://windows.php.net/downloads/releases/archives/php-7.3.6-nts-Win32-VC15-x64.zip"
 REM set download_url_xdebug="https://xdebug.org/files/php_xdebug-2.7.1-7.2-vc15-nts-x86_64.dll"
 set download_url_xdebug="https://xdebug.org/files/php_xdebug-2.7.2-7.3-vc15-nts-x86_64.dll"
-set download_url_python="https://www.dropbox.com/s/sjlvd69abjdh02x/python354.7z?dl=1"
+REM set download_url_python="https://www.dropbox.com/s/sjlvd69abjdh02x/python354.7z?dl=1"
+set download_url_python="https://www.dropbox.com/s/2v6i1pskojhh1sk/python373.7z?dl=1"
 set download_url_cmake="https://github.com/Kitware/CMake/releases/download/v3.14.2/cmake-3.14.2-win64-x64.zip"
 
 set download_url_vscode="https://go.microsoft.com/fwlink/?Linkid=850641"
