@@ -8,7 +8,7 @@ After installation, just zip & unzip then use it at public windows pc
 
 ## Install
 * Download this repository
-* Remove `.git` folder
+* Remove `.git` folder in root of downloaded repository of exist
 * Run `cmd` then move to unziped repository path
     ```sh
     $ cd setup
