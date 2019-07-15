@@ -183,7 +183,7 @@
     "breadcrumbs.enabled": true,
     "window.titleBarStyle": "custom",
     "files.autoSave": "afterDelay",
-    "workbench.statusBar.visible": true,
+    "workbench.statusBar.visible": false,
     "workbench.settings.editor": "json",
     "explorer.confirmDragAndDrop": false,
     "vetur.format.defaultFormatter.js": "vscode-typescript",
@@ -213,7 +213,15 @@
         "GOARCH": "amd64",
         "GOOS": "windows"
     },
-    "go.useLanguageServer": false,
+    "go.useLanguageServer": true,
+    "[go]": {
+        "editor.snippetSuggestions": "none",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": false
+        },
+        "editor.defaultFormatter": "ms-vscode.Go"
+    },
     "go.languageServerExperimentalFeatures": {
         "format": false,
         "autoComplete": false,
@@ -240,5 +248,6 @@
     "phpfmt.php_bin": "\"php.exe\"",
     "phpfmt.psr1": true,
     "phpfmt.psr2": false,
-    "workbench.iconTheme": "vscode-icons"
+    "workbench.iconTheme": "vscode-icons",
+    "vsicons.dontShowNewVersionMessage": true
 }
