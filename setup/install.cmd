@@ -460,12 +460,12 @@ Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-d
 REM echo ### postgres
 REM Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension ckolkman.vscode-postgres
 
-REM echo ### vetur
-REM Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension octref.vetur
+echo ### vetur
+Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension octref.vetur
 echo ### go
 Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension ms-vscode.Go
-echo ### asp
-Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension jtjoo.classic-asp-html
+REM echo ### asp
+REM Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension jtjoo.classic-asp-html
 REM echo ### python
 REM Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension ms-python.python
 
