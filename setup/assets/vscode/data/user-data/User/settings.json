@@ -223,6 +223,9 @@
         },
         "editor.defaultFormatter": "ms-vscode.Go"
     },
+    "gopls": {
+        "usePlaceholders": true // add parameter placeholders when completing a function
+    },
     "go.languageServerExperimentalFeatures": {
         "format": false,
         "autoComplete": true,
