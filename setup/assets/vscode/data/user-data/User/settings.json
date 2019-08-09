@@ -227,14 +227,14 @@
         "format": false,
         "autoComplete": true,
         "rename": true,
-        "goToDefinition": false,
+        "goToDefinition": true,
         "hover": true,
-        "signatureHelp": false, // =함수(변수,변수) 이런 거
-        "goToTypeDefinition": false,
-        "goToImplementation": false,
-        "documentSymbols": false, // =outline
-        "workspaceSymbols": false,
-        "findReferences": false
+        "signatureHelp": true, // =함수(변수,변수) 이런 거
+        "goToTypeDefinition": true,
+        "goToImplementation": true,
+        "documentSymbols": true, // =outline
+        "workspaceSymbols": true,
+        "findReferences": true
     },
     "go.languageServerFlags": [],
     "go.docsTool": "gogetdoc",
