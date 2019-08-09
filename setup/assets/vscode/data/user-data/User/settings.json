@@ -218,16 +218,16 @@
         "editor.snippetSuggestions": "none",
         "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
-            "source.organizeImports": false
+            "source.organizeImports": true
         },
         "editor.defaultFormatter": "ms-vscode.Go"
     },
     "go.languageServerExperimentalFeatures": {
         "format": false,
-        "autoComplete": false,
+        "autoComplete": true,
         "rename": true,
         "goToDefinition": false,
-        "hover": false,
+        "hover": true,
         "signatureHelp": false, // =함수(변수,변수) 이런 거
         "goToTypeDefinition": false,
         "goToImplementation": false,
