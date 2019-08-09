@@ -4,10 +4,10 @@ rem vscode path
 set "VSC_ROOT=%cd%"
 set "VSC_DRIVE=%CD:~0,2%"
 set "PATH=%cd%;C:\Windows;C:\Windows\System;C:\Windows\System32"
-rem 기존 시스템 설정의 PATH에 아래 프로그램들이 깔려있으면 충돌나므로, 기존 패스는 아예 다 날려버림
+rem Remove existing paths
 rem set "PATH=%cd%;%PATH%"
 
-rem UserProfile, Appdata 등 다시 지정
+rem Set again UserProfile, Appdata...
 cd ..\..
 set "HomePath=%cd%\user\home"
 set "UserProfile=%cd%\user\userprofile"
@@ -127,7 +127,7 @@ git config --system http.sslverify false
 
 Code.exe --extensions-dir .\data\extension --user-data-dir .\data\user-data
 
-rem vscode 종료 시, 크로미움 캐시데이터 삭제
+rem Remove vscode caches when exit
 %VSC_DRIVE%
 cd %VSC_ROOT%
 rmdir .\data\user-data\Cache /s /q
@@ -152,7 +152,7 @@ go clean -cache
 
 del ..\..\user\gocache\log.txt
 
-rem vscode 종료 시, 상주하는 프로세스 모두 종료
+rem Kill procs from vscode when exit
 taskkill /F /IM gocode-gomod.exe > nul
 taskkill /F /IM nginx.exe > nul
 taskkill /F /IM php.exe > nul

@@ -1,10 +1,6 @@
 // 키 바인딩을 이 파일에 넣어서 기본값을 덮어씁니다.
 [
     {
-        "key": "alt+oem_3",
-        "command": "workbench.action.terminal.kill"
-    },
-    {
         "key": "alt+b",
         "command": "workbench.action.toggleActivityBarVisibility"
     },
@@ -35,5 +31,13 @@
     {
         "key": "ctrl+j ctrl+j",
         "command": "settings.cycle.setWasmEnv"
+    },
+    {
+        "key": "shift+f1",
+        "command": "go.languageserver.restart"
+    },
+    {
+        "key": "alt+oem_3",
+        "command": "workbench.action.closePanel"
     }
 ]

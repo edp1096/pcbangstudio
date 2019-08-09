@@ -183,7 +183,7 @@
     "breadcrumbs.enabled": true,
     "window.titleBarStyle": "custom",
     "files.autoSave": "afterDelay",
-    "workbench.statusBar.visible": false,
+    "workbench.statusBar.visible": true,
     "workbench.settings.editor": "json",
     "explorer.confirmDragAndDrop": false,
     "vetur.format.defaultFormatter.js": "vscode-typescript",
@@ -218,7 +218,8 @@
         "editor.snippetSuggestions": "none",
         "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
-            "source.organizeImports": false
+            "source.organizeImports": false,
+            "source.fixAll": true,
         },
         "editor.defaultFormatter": "ms-vscode.Go"
     },
