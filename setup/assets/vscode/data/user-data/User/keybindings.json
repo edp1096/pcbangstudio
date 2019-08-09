@@ -39,5 +39,9 @@
     {
         "key": "alt+oem_3",
         "command": "workbench.action.closePanel"
+    },
+    {
+        "key": "alt+f2",
+        "command": "go.install.package"
     }
 ]

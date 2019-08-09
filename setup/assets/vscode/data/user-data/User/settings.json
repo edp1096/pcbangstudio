@@ -56,13 +56,13 @@
         {
             "description": "   "
         },
-        {
-            "description": "Go - build to workspace",
-            "executable": "go_install.cmd",
-            "parameters": "%workspace%",
-            "startIn": "%item_path%",
-            "output": true
-        },
+        // {
+        //     "description": "Go - build to workspace",
+        //     "executable": "go_install.cmd",
+        //     "parameters": "%workspace%",
+        //     "startIn": "%item_path%",
+        //     "output": true
+        // },
         // {
         //     "description": "Install to workspace with vendor",
         //     "executable": "go_install_mod_vendor.cmd",
@@ -91,11 +91,11 @@
         //     "startIn": "%item_path%",
         //     "output": true
         // },
-        // {
-        //     "description": "Flush gocache & temp",
-        //     "executable": "flush_gopath.cmd",
-        //     "output": true
-        // },
+        {
+            "description": "Flush gocache & temp",
+            "executable": "flush_gopath.cmd",
+            "output": true
+        },
         // {
         //     "description": "Go test && save test.log",
         //     "executable": "go",
@@ -139,14 +139,16 @@
                     "window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}${appName}",
                     "go.toolsEnvVars": {
                         "GOARCH": "amd64",
-                        "GOOS": "windows"
+                        "GOOS": "windows",
+                        "GOBIN": "${workspaceFolder}/bin"
                     }
                 },
                 {
                     "window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}${appName} for Golang/WASM",
                     "go.toolsEnvVars": {
                         "GOARCH": "wasm",
-                        "GOOS": "js"
+                        "GOOS": "js",
+                        "GOBIN": "${workspaceFolder}/bin"
                     }
                 }
             ]
@@ -211,7 +213,8 @@
     "editor.minimap.side": "left",
     "go.toolsEnvVars": {
         "GOARCH": "amd64",
-        "GOOS": "windows"
+        "GOOS": "windows",
+        "GOBIN": "${workspaceFolder}/bin"
     },
     "go.useLanguageServer": true,
     "[go]": {
