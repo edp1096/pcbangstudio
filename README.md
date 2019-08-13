@@ -20,7 +20,7 @@ After installation, just zip & unzip then use it at public windows pc
 * Git
 * Compiler, others - All can be run on integrated terminal. Press Ctrl + `
     * MinGW
-    * Go - Press Shift + F2 > Module init / Shift + F2 > Install to workspace
+    * Go - Press Shift + F2 > Module init / Alt + F2 > Go: Install current package
     * NodeJS
     * PHP
     * Python 3.5.4
