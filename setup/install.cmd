@@ -416,6 +416,7 @@ echo ## Create userprofile
 if not exist userprofile md userprofile
 cd userprofile
 set UserProfile=%cd%
+md Desktop
 md AppData
 md AppData\Roaming
 md AppData\Local
