@@ -228,6 +228,7 @@
     },
     "gopls": {
         "usePlaceholders": true // add parameter placeholders when completing a function
+        "wantCompletionDocumentation": true // for documentation in completion items
     },
     "go.languageServerExperimentalFeatures": {
         "format": false,
@@ -235,10 +236,11 @@
         "rename": true,
         "goToDefinition": true,
         "hover": true,
-        "signatureHelp": true, // =함수(변수,변수) 이런 거
+        "signatureHelp": true,
         "goToTypeDefinition": true,
         "goToImplementation": true,
         "documentSymbols": true, // =outline
+        "documentLink": true, // Make url for package in import
         "workspaceSymbols": true,
         "findReferences": true
     },
@@ -251,10 +253,7 @@
     "git.autofetch": true,
     "html.format.wrapLineLength": 1024,
     "php.suggest.basic": false,
-    "intelephense.format.enable": false,
-    "phpfmt.php_bin": "\"php.exe\"",
-    "phpfmt.psr1": true,
-    "phpfmt.psr2": false,
+    "intelephense.format.enable": true,
     "workbench.iconTheme": "vscode-icons",
     "vsicons.dontShowNewVersionMessage": true
 }
