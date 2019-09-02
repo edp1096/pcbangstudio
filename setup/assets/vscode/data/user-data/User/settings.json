@@ -231,7 +231,7 @@
         "wantCompletionDocumentation": true // for documentation in completion items
     },
     "go.languageServerExperimentalFeatures": {
-        "format": false,
+        "format": true,
         "autoComplete": true,
         "rename": true,
         "goToDefinition": true,
