@@ -221,14 +221,13 @@
         "editor.snippetSuggestions": "none",
         "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
-            "source.organizeImports": false,
+            "source.organizeImports": true,
             "source.fixAll": true,
         },
         "editor.defaultFormatter": "ms-vscode.Go"
     },
     "gopls": {
         "usePlaceholders": true, // add parameter placeholders when completing a function
-        "wantCompletionDocumentation": true // for documentation in completion items
     },
     "go.languageServerExperimentalFeatures": {
         "format": true,
