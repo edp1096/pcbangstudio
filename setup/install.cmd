@@ -29,8 +29,8 @@ set download_url_pgsql="http://sbp.enterprisedb.com/getfile.jsp?fileid=11688&_ga
 set download_url_mingw="https://sourceforge.net/projects/mingw-w64/files/Toolchains targetting Win64/Personal Builds/mingw-builds/8.1.0/threads-posix/seh/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z/download"
 REM set download_url_mingw="https://sourceforge.mirrorservice.org/m/mi/mingw-w64/Toolchains%%20targetting%%20Win64/Personal%%20Builds/mingw-builds/8.1.0/threads-posix/seh/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z"
 REM set download_url_golang="https://dl.google.com/go/go1.12.9.windows-amd64.zip"
-REM set download_url_golang="https://dl.google.com/go/go1.13.windows-amd64.zip"
-set download_url_golang="https://dl.google.com/go/go1.14.4.windows-amd64.zip"
+set download_url_golang="https://dl.google.com/go/go1.13.windows-amd64.zip"
+REM set download_url_golang="https://dl.google.com/go/go1.14.4.windows-amd64.zip"
 set download_url_nodejs="https://nodejs.org/dist/v10.16.0/node-v10.16.0-win-x64.zip"
 rem When PHP guys release new version, the path of before last version have changed to archive
 rem set download_url_php="https://windows.php.net/downloads/releases/php-7.2.18-nts-Win32-VC15-x64.zip"
