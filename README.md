@@ -45,6 +45,8 @@ After installation, just zip & unzip then use it at public windows pc
 * Run `Launcher` in `vscode` - Shift + F2
 * Each location of `AppData` and `UserProfile` and `Home` will be set to separated places
     * See `user` folder
+* About error from git `user.name` `user.email`
+    * See `%pcbangstudio_root%/tools/utils/mycmd/iam*.cmd`
 
 ## Update `VSCode`
 * <b>Don't click `Gear` icon > `download` nor click `Help` > `Download update`</b>
