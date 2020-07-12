@@ -140,7 +140,7 @@
                     "go.toolsEnvVars": {
                         "GOARCH": "amd64",
                         "GOOS": "windows",
-                        "GOBIN": "${workspaceFolder}/bin"
+                        // "GOBIN": "${workspaceFolder}/bin"
                     }
                 },
                 {
@@ -148,7 +148,7 @@
                     "go.toolsEnvVars": {
                         "GOARCH": "wasm",
                         "GOOS": "js",
-                        "GOBIN": "${workspaceFolder}/bin"
+                        // "GOBIN": "${workspaceFolder}/bin"
                     }
                 }
             ]
@@ -214,7 +214,7 @@
     "go.toolsEnvVars": {
         "GOARCH": "amd64",
         "GOOS": "windows",
-        "GOBIN": "${workspaceFolder}/bin"
+        // "GOBIN": "${workspaceFolder}/bin"
     },
     "go.useLanguageServer": true,
     "[go]": {
