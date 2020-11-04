@@ -455,13 +455,15 @@ set NODE_NO_WARNINGS=1
 cd tools\vscode
 echo ### launcher
 Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension ilich8086.launcher
-echo ### bracket-pair-colorizer
-Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension CoenraadS.bracket-pair-colorizer
+echo ### bracket-pair-colorizer-2
+Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension CoenraadS.bracket-pair-colorizer-2
 echo ### disableligatures
 Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension CoenraadS.disableligatures
 
 REM echo ### postgres
 REM Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension ckolkman.vscode-postgres
+REM echo ### ERD Editor
+REM Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension dineug.vuerd-vscode
 
 echo ### vetur
 Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension octref.vetur
@@ -478,6 +480,9 @@ Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-d
 REM echo ### css-compact
 REM Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension jsonchou.css-compact
 
+REM echo ### File tree generator
+REM Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension shinotatwu-ds.file-tree-generator
+
 echo ### rest-client
 Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension humao.rest-client
 echo ### settings-cycler
@@ -488,5 +493,6 @@ Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-d
 echo.
 echo Done to installation
 echo Please install D2Coding font yourself. - https://github.com/naver/d2codingfont/releases
+echo Or change your favorite font in settings.json of vscode
 echo.
 pause
