@@ -7,9 +7,13 @@ cd %VSC_ROOT%
 ..\utils\gnuwin\sed -i '0,/root.*/ s//root   %TARGET_WORKSPACE%;/g' ..\utils\nginx\conf\nginx.conf
 ..\utils\gnuwin\sed -i '0,/root.*/! {0,/root.*/! {0,/root.*/ s//root   %TARGET_WORKSPACE%;/g}}' ..\utils\nginx\conf\nginx.conf
 
-rem √ﬂ∞°µ» º≠πˆ º≥¡§øÎ - Ω≈º∫øÌ ¿¸øÎ
+rem Ï∂îÍ∞ÄÎêú ÏÑúÎ≤Ñ ÏÑ§Ï†ïÏö© - Ïã†ÏÑ±Ïö± Ï†ÑÏö©
 ..\utils\gnuwin\sed -i '0,/root.*/! {0,/root.*/! {0,/root.*/! {0,/root.*/! {0,/root.*/! {0,/root.*/ s//root   %TARGET_WORKSPACE%;/g}}}}}' ..\utils\nginx\conf\nginx.conf
 ..\utils\gnuwin\sed -i '0,/root.*/! {0,/root.*/! {0,/root.*/! {0,/root.*/! {0,/root.*/! {0,/root.*/! {0,/root.*/! {0,/root.*/ s//root   %TARGET_WORKSPACE%;/g}}}}}}}' ..\utils\nginx\conf\nginx.conf
+
+rem Îòê Ï∂îÍ∞ÄÎêú ÏÑúÎ≤Ñ ÏÑ§Ï†ïÏö© - Ïã†ÏÑ±Ïö± Ï†ÑÏö©
+..\utils\gnuwin\sed -i '0,/root.*/! {0,/root.*/! {0,/root.*/! {0,/root.*/! {0,/root.*/! {0,/root.*/! {0,/root.*/! {0,/root.*/! {0,/root.*/! {0,/root.*/ s//root   %TARGET_WORKSPACE%;/g}}}}}}}}}' ..\utils\nginx\conf\nginx.conf
+..\utils\gnuwin\sed -i '0,/root.*/! {0,/root.*/! {0,/root.*/! {0,/root.*/! {0,/root.*/! {0,/root.*/! {0,/root.*/! {0,/root.*/! {0,/root.*/! {0,/root.*/! {0,/root.*/! {0,/root.*/ s//root   %TARGET_WORKSPACE%;/g}}}}}}}}}}}' ..\utils\nginx\conf\nginx.conf
 
 cd ..\utils\nginx
 start nginx.exe
