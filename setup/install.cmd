@@ -10,7 +10,7 @@ set silentcurl=--progress-bar
 rem set download_url_git="https://github.com/git-for-windows/git/releases/download/v2.21.0.windows.1/PortableGit-2.21.0-64-bit.7z.exe"
 rem Use MinGit-busybox instead above
 set download_url_git="https://github.com/git-for-windows/git/releases/download/v2.28.0.windows.1/MinGit-2.28.0-busybox-64-bit.zip"
-set download_url_heidisql="https://www.heidisql.com/downloads/releases/HeidiSQL_11.0_64_Portable.zip"
+set download_url_heidisql="https://www.heidisql.com/downloads/releases/HeidiSQL_11.1_64_Portable.zip"
 
 rem PuTTY
 REM set download_url_putty="https://github.com/teamnop/HPuTTY/releases/download/p0.66-t027-h004/putty.zip"
@@ -20,23 +20,24 @@ REM set download_url_filezilla="https://download.filezilla-project.org/client/Fi
 set download_url_filezilla="https://download.filezilla-project.org/client/FileZilla_3.13.1_win64.zip"
 set download_url_notepad2="https://github.com/zufuliu/notepad2/releases/download/v4.19.04r2016/Notepad2_x64_v4.19.04r2016.zip"
 set download_url_gnuwin="https://www.dropbox.com/s/2q3x5o2wzug1hbc/gnuwin.zip?dl=1"
-set download_url_nginx="https://nginx.org/download/nginx-1.16.1.zip"
+set download_url_nginx="https://nginx.org/download/nginx-1.18.0.zip"
 
 REM set download_url_mariadb="https://downloads.mariadb.org/f/mariadb-10.3.22/winx64-packages/mariadb-10.3.22-winx64.zip"
-set download_url_mariadb="https://downloads.mariadb.org/f/mariadb-10.5.4/winx64-packages/mariadb-10.5.4-winx64.zip"
-set download_url_pgsql="https://sbp.enterprisedb.com/getfile.jsp?fileid=12640&_ga=2.198125935.1966867399.1596988040-83685826.1596988040"
+set download_url_mariadb="https://downloads.mariadb.org/f/mariadb-10.5.8/winx64-packages/mariadb-10.5.8-winx64.zip"
+REM set download_url_pgsql="https://get.enterprisedb.com/postgresql/postgresql-12.3-2-windows-x64-binaries.zip"
+set download_url_pgsql="https://get.enterprisedb.com/postgresql/postgresql-13.1-1-windows-x64-binaries.zip"
 
 REM set download_url_mingw="https://sourceforge.mirrorservice.org/m/mi/mingw-w64/Toolchains%%20targetting%%20Win64/Personal%%20Builds/mingw-builds/8.1.0/threads-posix/seh/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z"
 set download_url_mingw="https://sourceforge.net/projects/mingw-w64/files/Toolchains targetting Win64/Personal Builds/mingw-builds/8.1.0/threads-posix/seh/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z/download"
 
-set download_url_golang="https://dl.google.com/go/go1.14.7.windows-amd64.zip"
-set download_url_nodejs="https://nodejs.org/dist/v12.18.3/node-v12.18.3-win-x64.zip"
+set download_url_golang="https://dl.google.com/go/go1.15.6.windows-amd64.zip"
+set download_url_nodejs="https://nodejs.org/dist/v14.15.1/node-v14.15.1-win-x64.zip"
 rem When PHP guys release new version, the path of before last version have changed to archive
-set download_url_php="https://windows.php.net/downloads/releases/archives/php-7.4.8-nts-Win32-vc15-x64.zip"
+set download_url_php="https://windows.php.net/downloads/releases/archives/php-7.4.12-nts-Win32-vc15-x64.zip"
 set download_url_xdebug="https://xdebug.org/files/php_xdebug-2.9.6-7.4-vc15-nts-x86_64.dll"
 REM set download_url_python="https://www.dropbox.com/s/sjlvd69abjdh02x/python354.7z?dl=1"
 set download_url_python="https://www.dropbox.com/s/2v6i1pskojhh1sk/python373.7z?dl=1"
-set download_url_cmake="https://github.com/Kitware/CMake/releases/download/v3.18.1/cmake-3.18.1-win64-x64.zip"
+set download_url_cmake="https://github.com/Kitware/CMake/releases/download/v3.18.1/cmake-3.19.1-win64-x64.zip"
 
 set download_url_vscode="https://go.microsoft.com/fwlink/?Linkid=850641"
 
@@ -489,6 +490,8 @@ echo ### settings-cycler
 Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension hoovercj.vscode-settings-cycler
 echo ### icons
 Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension vscode-icons-team.vscode-icons
+echo ### Multiple clipboards
+Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension slevesque.vscode-multiclip
 
 echo.
 echo Done to installation
