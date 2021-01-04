@@ -228,6 +228,7 @@
     },
     "gopls": {
         "usePlaceholders": true, // add parameter placeholders when completing a function
+        "experimentalWorkspaceModule": true
     },
     "go.languageServerExperimentalFeatures": {
         "format": true,
