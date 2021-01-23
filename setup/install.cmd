@@ -12,10 +12,12 @@ rem Use MinGit-busybox instead above
 set download_url_git="https://github.com/git-for-windows/git/releases/download/v2.28.0.windows.1/MinGit-2.28.0-busybox-64-bit.zip"
 set download_url_heidisql="https://www.heidisql.com/downloads/releases/HeidiSQL_11.1_64_Portable.zip"
 
-rem PuTTY
-REM set download_url_putty="https://github.com/teamnop/HPuTTY/releases/download/p0.66-t027-h004/putty.zip"
+REM PuTTY
 set download_url_putty="https://the.earth.li/~sgtatham/putty/latest/w64/putty.zip"
-rem Filezilla 3.41.2 have a problem which cannot set to local path via config/filezilla.xml
+REM PuTTYtray - feature for saving session to file
+set download_url_puttytray="https://puttytray.goeswhere.com/download/putty.exe"
+
+rem Filezilla >= 3.41.2 have a problem which cannot set to local path via config/filezilla.xml
 REM set download_url_filezilla="https://download.filezilla-project.org/client/FileZilla_latest_win64.zip"
 set download_url_filezilla="https://download.filezilla-project.org/client/FileZilla_3.13.1_win64.zip"
 set download_url_notepad2="https://github.com/zufuliu/notepad2/releases/download/v4.19.04r2016/Notepad2_x64_v4.19.04r2016.zip"
@@ -27,17 +29,19 @@ set download_url_mariadb="https://downloads.mariadb.org/f/mariadb-10.5.8/winx64-
 REM set download_url_pgsql="https://get.enterprisedb.com/postgresql/postgresql-12.3-2-windows-x64-binaries.zip"
 set download_url_pgsql="https://get.enterprisedb.com/postgresql/postgresql-13.1-1-windows-x64-binaries.zip"
 
+REM set download_url_mingw="https://github.com/brechtsanders/winlibs_mingw/releases/download/10.2.0-11.0.0-8.0.0-r5/winlibs-x86_64-posix-seh-gcc-10.2.0-llvm-11.0.0-mingw-w64-8.0.0-r5.7z"
+REM set download_url_mingw="https://github.com/brechtsanders/winlibs_mingw/releases/download/10.2.0-11.0.0-8.0.0-r5/winlibs-x86_64-posix-seh-gcc-10.2.0-mingw-w64-8.0.0-r5.7z"
 REM set download_url_mingw="https://sourceforge.mirrorservice.org/m/mi/mingw-w64/Toolchains%%20targetting%%20Win64/Personal%%20Builds/mingw-builds/8.1.0/threads-posix/seh/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z"
 set download_url_mingw="https://sourceforge.net/projects/mingw-w64/files/Toolchains targetting Win64/Personal Builds/mingw-builds/8.1.0/threads-posix/seh/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z/download"
 
-set download_url_golang="https://dl.google.com/go/go1.15.6.windows-amd64.zip"
-set download_url_nodejs="https://nodejs.org/dist/v14.15.1/node-v14.15.1-win-x64.zip"
+set download_url_golang="https://dl.google.com/go/go1.15.7.windows-amd64.zip"
+set download_url_nodejs="https://nodejs.org/dist/v14.15.4/node-v14.15.4-win-x64.zip"
 rem When PHP guys release new version, the path of before last version have changed to archive
-set download_url_php="https://windows.php.net/downloads/releases/archives/php-7.4.12-nts-Win32-vc15-x64.zip"
+set download_url_php="https://windows.php.net/downloads/releases/archives/php-7.4.13-nts-Win32-vc15-x64.zip"
 set download_url_xdebug="https://xdebug.org/files/php_xdebug-2.9.6-7.4-vc15-nts-x86_64.dll"
 REM set download_url_python="https://www.dropbox.com/s/sjlvd69abjdh02x/python354.7z?dl=1"
 set download_url_python="https://www.dropbox.com/s/2v6i1pskojhh1sk/python373.7z?dl=1"
-set download_url_cmake="https://github.com/Kitware/CMake/releases/download/v3.18.1/cmake-3.19.1-win64-x64.zip"
+set download_url_cmake="https://github.com/Kitware/CMake/releases/download/v3.19.3/cmake-3.19.3-win64-x64.zip"
 
 set download_url_vscode="https://go.microsoft.com/fwlink/?Linkid=850641"
 
@@ -266,6 +270,11 @@ if defined do_putty (
     curl.exe %silentcurl% -Lo putty.zip %download_url_putty%
     7za x putty.zip -aoa %silent7z%
     del putty.zip
+
+    if defined download_url_puttytray (
+      del putty.exe
+      curl.exe %silentcurl% -Lo putty.exe %download_url_puttytray%
+    )
   cd ..
 )
 
