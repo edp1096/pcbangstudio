@@ -65,5 +65,5 @@ After installation, just zip & unzip then use it at public windows pc
 * run `etc/clear_garbage.cmd`
 
 ## Manage settings
-* See `https://github.com/edp1096/setting-sample`
+* See [setting-sample](https://github.com/edp1096/setting-sample)
 
