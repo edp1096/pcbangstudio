@@ -63,3 +63,7 @@ After installation, just zip & unzip then use it at public windows pc
 
 ## Cleanup home, userprofile, tmp..
 * run `etc/clear_garbage.cmd`
+
+## Manage settings
+* See `https://github.com/edp1096/setting-sample`
+
