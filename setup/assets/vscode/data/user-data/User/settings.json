@@ -164,16 +164,21 @@
         "executable": "cmd.exe",
         "parameters": "/c start powershell -ExecutionPolicy Bypass -NoLogo -NoProfile -NoExit -Command set-alias ll dir; remove-item alias:curl; remove-item alias:wget; remove-item alias:cp; remove-item alias:mv; remove-item alias:rm; remove-item alias:rmdir; function prompt { $host.ui.rawui.WindowTitle = \"PS $pwd\";  $p = $(($pwd -split '\\\\')[-1] -join '\\') + '$ '; return $p }"
     },
-    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-    "terminal.integrated.shellArgs.windows": [
-        "-ExecutionPolicy",
-        "Bypass",
-        "-NoLogo",
-        "-NoProfile",
-        "-NoExit",
-        "-Command",
-        "set-alias ll dir; remove-item alias:curl; remove-item alias:wget; remove-item alias:cp; remove-item alias:mv; remove-item alias:rm; remove-item alias:rmdir; function prompt { $host.ui.rawui.WindowTitle = \"PS $pwd\";  $p = $(($pwd -split '\\\\')[-1] -join '\\') + '$ '; if (-not (Test-Path env:GOENVADDED)) { Remove-Variable -name GOPATH; $env:GOBIN = \"$pwd\\bin\"; $env:GOENVADDED = \"exist\"; } return $p }"
-    ],
+    "terminal.integrated.profiles.windows": {
+        "PowerShell -NoProfile": {
+            "source": "PowerShell",
+            "args": [
+                "-NoProfile",
+                "-ExecutionPolicy",
+                "Bypass",
+                "-NoLogo",
+                "-NoProfile",
+                "-NoExit",
+                "-Command",
+                "set-alias ll dir; remove-item alias:curl; remove-item alias:wget; remove-item alias:cp; remove-item alias:mv; remove-item alias:rm; remove-item alias:rmdir; function prompt { $host.ui.rawui.WindowTitle = \"PS $pwd\";  $p = $(($pwd -split '\\\\')[-1] -join '\\') + '$ '; if (-not (Test-Path env:GOENVADDED)) { Remove-Variable -name GOPATH; $env:GOBIN = \"$pwd\\bin\"; $env:GOENVADDED = \"exist\"; } return $p }"
+            ]
+        }
+    },
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
     "go.gotoSymbol.includeImports": true,
