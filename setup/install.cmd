@@ -24,8 +24,7 @@ set download_url_notepad2="https://github.com/zufuliu/notepad2/releases/download
 set download_url_gnuwin="https://www.dropbox.com/s/2q3x5o2wzug1hbc/gnuwin.zip?dl=1"
 set download_url_nginx="https://nginx.org/download/nginx-1.18.0.zip"
 
-REM set download_url_mariadb="https://downloads.mariadb.org/f/mariadb-10.3.22/winx64-packages/mariadb-10.3.22-winx64.zip"
-set download_url_mariadb="https://downloads.mariadb.org/f/mariadb-10.5.8/winx64-packages/mariadb-10.5.8-winx64.zip"
+set download_url_mariadb="https://downloads.mariadb.org/interstitial/mariadb-10.5.11/winx64-packages/mariadb-10.5.11-winx64.zip"
 REM set download_url_pgsql="https://get.enterprisedb.com/postgresql/postgresql-12.3-2-windows-x64-binaries.zip"
 set download_url_pgsql="https://get.enterprisedb.com/postgresql/postgresql-13.1-1-windows-x64-binaries.zip"
 
