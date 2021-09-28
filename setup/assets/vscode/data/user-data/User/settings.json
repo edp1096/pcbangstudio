@@ -167,7 +167,7 @@
     "workbench.activityBar.visible": true,
     "editor.formatOnPaste": true,
     "editor.minimap.enabled": false,
-    // Ctrl+Shift+T 도스창 실행 명령을 CMD에서 Powershell로 변경
+    // Change Ctrl+Shift+T from CMD to Powershell
     "launcher.terminal": {
         "executable": "cmd.exe",
         "parameters": "/c start powershell -ExecutionPolicy Bypass -NoLogo -NoProfile -NoExit -Command set-alias ll dir; remove-item alias:curl; remove-item alias:wget; remove-item alias:cp; remove-item alias:mv; remove-item alias:rm; remove-item alias:rmdir; function prompt { $host.ui.rawui.WindowTitle = \"PS $pwd\";  $p = $(($pwd -split '\\\\')[-1] -join '\\') + '$ '; return $p }"
@@ -211,6 +211,19 @@
             "singleQuote": false
         }
     },
+    /*
+    PyLint ignoring set
+    missing-docstring,
+    no-member, 
+    invalid-name(UPPER_CASE)
+    */
+    "python.linting.pylintArgs": [
+        "--disable=C0111, E1101, C0103, E1129, W0702",
+        "--max-line-length=120"
+    ],
+    "python.formatting.autopep8Args": [
+        "--indent_size=4"
+    ],
     "editor.minimap.side": "left",
     "go.toolsGopath": "${env:GOPATH}",
     "go.toolsEnvVars": {
