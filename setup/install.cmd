@@ -465,8 +465,6 @@ set NODE_NO_WARNINGS=1
 cd tools\vscode
 echo ### launcher
 Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension ilich8086.launcher
-echo ### bracket-pair-colorizer-2
-Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension CoenraadS.bracket-pair-colorizer-2
 echo ### disableligatures
 Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension CoenraadS.disableligatures
 
@@ -492,6 +490,9 @@ REM Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --us
 
 REM echo ### File tree generator
 REM Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension shinotatwu-ds.file-tree-generator
+
+echo ### git graph
+Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension mhutchie.git-graph
 
 echo ### rest-client
 Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension humao.rest-client
