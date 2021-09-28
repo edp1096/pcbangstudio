@@ -130,7 +130,7 @@
         },
     ],
     "settings.cycle": [
-        // 설정 변경 - Ctrl + j Ctrl + j
+        // Change setting - Ctrl + j Ctrl + j
         {
             "id": "setWasmEnv",
             "overrideWorkspaceSettings": false,
@@ -148,6 +148,14 @@
                     "go.toolsEnvVars": {
                         "GOARCH": "wasm",
                         "GOOS": "js",
+                        "GOBIN": "${workspaceFolder}/bin"
+                    }
+                },
+                {
+                    "window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}${appName} for Linux",
+                    "go.toolsEnvVars": {
+                        "GOARCH": "amd64",
+                        "GOOS": "linux",
                         "GOBIN": "${workspaceFolder}/bin"
                     }
                 }
@@ -179,6 +187,7 @@
             ]
         }
     },
+    "terminal.integrated.defaultProfile.windows": "PowerShell -NoProfile",
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
     "go.gotoSymbol.includeImports": true,
@@ -202,20 +211,8 @@
             "singleQuote": false
         }
     },
-    /*
-    PyLint 비활성 목록
-    missing-docstring,
-    no-member, 
-    invalid-name(UPPER_CASE)
-    */
-    "python.linting.pylintArgs": [
-        "--disable=C0111, E1101, C0103, E1129, W0702",
-        "--max-line-length=120"
-    ],
-    "python.formatting.autopep8Args": [
-        "--indent_size=4"
-    ],
     "editor.minimap.side": "left",
+    "go.toolsGopath": "${env:GOPATH}",
     "go.toolsEnvVars": {
         "GOARCH": "amd64",
         "GOOS": "windows",
@@ -229,25 +226,12 @@
             "source.organizeImports": true,
             "source.fixAll": true,
         },
-        "editor.defaultFormatter": "ms-vscode.Go"
+        "editor.defaultFormatter": "golang.go"
     },
+    "files.eol": "\n",
     "gopls": {
         "usePlaceholders": true, // add parameter placeholders when completing a function
         "experimentalWorkspaceModule": true
-    },
-    "go.languageServerExperimentalFeatures": {
-        "format": true,
-        "autoComplete": true,
-        "rename": true,
-        "goToDefinition": true,
-        "hover": true,
-        "signatureHelp": true,
-        "goToTypeDefinition": true,
-        "goToImplementation": true,
-        "documentSymbols": true, // =outline
-        "documentLink": true, // Make url for package in import
-        "workspaceSymbols": true,
-        "findReferences": true
     },
     "go.languageServerFlags": [],
     "go.docsTool": "gogetdoc",
@@ -258,7 +242,15 @@
     "git.autofetch": true,
     "html.format.wrapLineLength": 1024,
     "php.suggest.basic": false,
+    "intelephense.environment.shortOpenTag": true,
     "intelephense.format.enable": true,
+    "intelephense.format.braces": "k&r",
     "workbench.iconTheme": "vscode-icons",
+    "terminal.integrated.tabs.enabled": true,
+    "terminal.integrated.enableBell": true,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.inlineSuggest.enabled": true,
+    "editor.suggestSelection": "first",
+    "security.workspace.trust.enabled": false,
     "vsicons.dontShowNewVersionMessage": true
 }
