@@ -1,6 +1,6 @@
 # VSCode Portable
 
-Portable `vscode` creation toolset for using on `MS-Windows 10 / amd64` machine at public place
+Portable `vscode` creation toolset for using on `MS-Windows 10, 11 / amd64` machine at public place
 
 After installation, just zip & unzip then use it at public windows pc
 
