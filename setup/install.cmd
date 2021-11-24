@@ -34,7 +34,7 @@ REM set download_url_mingw="https://github.com/brechtsanders/winlibs_mingw/relea
 REM set download_url_mingw="https://sourceforge.mirrorservice.org/m/mi/mingw-w64/Toolchains%%20targetting%%20Win64/Personal%%20Builds/mingw-builds/8.1.0/threads-posix/seh/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z"
 set download_url_mingw="https://sourceforge.net/projects/mingw-w64/files/Toolchains targetting Win64/Personal Builds/mingw-builds/8.1.0/threads-posix/seh/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z/download"
 
-set download_url_golang="https://dl.google.com/go/go1.17.3.windows-amd64.zip"
+set download_url_golang="https://go.dev/dl/go1.17.3.windows-amd64.zip"
 set download_url_nodejs="https://nodejs.org/dist/v14.15.4/node-v14.15.4-win-x64.zip"
 rem When PHP guys release new version, the path of before last version have changed to archive
 set download_url_php="https://windows.php.net/downloads/releases/latest/php-7.4-Win32-vc15-x64-latest.zip"
