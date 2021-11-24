@@ -15,7 +15,7 @@ For /f %%i in ('..\utils\gnuwin\curl.exe "https://go.dev/VERSION?m=text"') do ec
 
 echo. && echo Extracting.. && echo.
 
-..\utils\gnuwin\unzip.exe -q go.zip
+..\utils\gnuwin\unzip.exe go.zip
 del go.zip
 
 echo. && echo "Check go version" && echo.
