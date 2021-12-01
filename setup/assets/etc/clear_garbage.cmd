@@ -1,4 +1,4 @@
-rem 삭제 참고 - https://stackoverflow.com/a/97896
+rem https://stackoverflow.com/a/97896
 cd ..
 
 rd /s /q .\home\user\appdata\roaming\*
