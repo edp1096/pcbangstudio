@@ -1,13 +1,13 @@
-rem »èÁ¦ Âü°í - https://stackoverflow.com/a/97896
+rem ì‚­ì œ ì°¸ê³  - https://stackoverflow.com/a/97896
 cd ..
 
-rd /s /q .\home\userprofile\appdata\roaming\*
-del /s /q .\home\userprofile\appdata\roaming\*
-rd /s /q .\home\userprofile\appdata\Local\*
-del /s /q .\home\userprofile\appdata\Local\*
+rd /s /q .\home\user\appdata\roaming\*
+del /s /q .\home\user\appdata\roaming\*
+rd /s /q .\home\user\appdata\Local\*
+del /s /q .\home\user\appdata\Local\*
 
-rd /s /q .\tools\gocache\*
-del /s /q .\tools\gocache\*
+rd /s /q .\user\gocache\*
+del /s /q .\user\gocache\*
 
 rd /s /q .\tools\vscode\data\user-data\Backups
 rd /s /q .\tools\vscode\data\user-data\blob_storage
