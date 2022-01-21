@@ -1,10 +1,10 @@
 rem https://stackoverflow.com/a/97896
 cd ..
 
-rd /s /q .\home\user\appdata\roaming\*
-del /s /q .\home\user\appdata\roaming\*
-rd /s /q .\home\user\appdata\Local\*
-del /s /q .\home\user\appdata\Local\*
+rd /s /q .\user\userprofile\appdata\roaming\*
+del /s /q .\user\userprofile\appdata\roaming\*
+rd /s /q .\user\userprofile\appdata\Local\*
+del /s /q .\user\userprofile\appdata\Local\*
 
 rd /s /q .\user\gocache\*
 del /s /q .\user\gocache\*

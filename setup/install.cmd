@@ -43,7 +43,10 @@ REM set download_url_python="https://www.dropbox.com/s/sjlvd69abjdh02x/python354
 set download_url_python="https://www.dropbox.com/s/2v6i1pskojhh1sk/python373.7z?dl=1"
 set download_url_cmake="https://github.com/Kitware/CMake/releases/download/v3.19.3/cmake-3.19.3-win64-x64.zip"
 
-set download_url_vscode="https://go.microsoft.com/fwlink/?Linkid=850641"
+REM Hold vscode version to 1.61.2 - vscode >= 1.62.0 and <= 1.63.2 have bugs for extensions installation with cli and terminal rendering
+REM If you want to use latest version, comment line archive link and uncomment the following line
+REM set download_url_vscode="https://go.microsoft.com/fwlink/?Linkid=850641"
+set download_url_vscode="https://update.code.visualstudio.com/1.61.2/win32-x64-archive/stable"
 
 rem Check whether folders are dirty
 if exist ..\tools if exist ..\user set stop_job=true
@@ -473,10 +476,10 @@ REM Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --us
 REM echo ### ERD Editor
 REM Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension dineug.vuerd-vscode
 
-echo ### vetur
-Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension octref.vetur
 echo ### go
 Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension golang.Go
+REM echo ### vetur
+REM Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension octref.vetur
 REM echo ### asp
 REM Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension jtjoo.classic-asp-html
 REM echo ### python
@@ -500,8 +503,8 @@ echo ### settings-cycler
 Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension hoovercj.vscode-settings-cycler
 echo ### icons
 Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension vscode-icons-team.vscode-icons
-echo ### Multiple clipboards
-Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension slevesque.vscode-multiclip
+REM echo ### Multiple clipboards
+REM Code.exe ".\resources\app\out\cli.js" --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension slevesque.vscode-multiclip
 
 echo.
 echo Done to installation
