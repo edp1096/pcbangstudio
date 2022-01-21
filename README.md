@@ -38,3 +38,10 @@ After installation, just zip & unzip then use it at public windows pc
 
 ## Manage settings
 * See [setting-sample](https://github.com/edp1096/setting-sample)
+
+## Block vscode update notice and trust check
+* Add following lines to `settings.json`
+```json
+"update.mode": "none",
+"security.workspace.trust.enabled": false,
+```
