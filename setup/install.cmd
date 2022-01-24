@@ -37,7 +37,7 @@ set download_url_mingw="https://sourceforge.net/projects/mingw-w64/files/Toolcha
 set download_url_golang="https://go.dev/dl/go1.17.3.windows-amd64.zip"
 set download_url_nodejs="https://nodejs.org/dist/v14.15.4/node-v14.15.4-win-x64.zip"
 rem When PHP guys release new version, the path of before last version have changed to archive
-set download_url_php="https://windows.php.net/downloads/releases/latest/php-7.4-Win32-vc15-x64-latest.zip"
+set download_url_php="https://windows.php.net/downloads/releases/latest/php-7.4-nts-Win32-vc15-x64-latest.zip"
 set download_url_xdebug="https://xdebug.org/files/php_xdebug-2.9.6-7.4-vc15-nts-x86_64.dll"
 REM set download_url_python="https://www.dropbox.com/s/sjlvd69abjdh02x/python354.7z?dl=1"
 set download_url_python="https://www.dropbox.com/s/2v6i1pskojhh1sk/python373.7z?dl=1"
