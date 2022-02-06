@@ -3,7 +3,7 @@ rem @echo off
 rem vscode path
 set "VSC_ROOT=%cd%"
 set "VSC_DRIVE=%CD:~0,2%"
-set "PATH=%cd%;C:\Windows;C:\Windows\System;C:\Windows\System32"
+set "PATH=%cd%\bin;C:\Windows;C:\Windows\System;C:\Windows\System32"
 rem Remove existing paths
 rem set "PATH=%cd%;%PATH%"
 
@@ -125,7 +125,7 @@ RunHiddenConsole gocode-gomod -s -cache
 rem git ssl cert disable
 git config --system http.sslverify false
 
-Code.exe --extensions-dir .\data\extension --user-data-dir .\data\user-data
+.\bin\code.cmd --extensions-dir .\data\extension --user-data-dir .\data\user-data
 
 rem Remove vscode caches when exit
 %VSC_DRIVE%
