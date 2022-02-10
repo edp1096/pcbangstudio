@@ -20,7 +20,8 @@ set download_url_puttytray="https://puttytray.goeswhere.com/download/putty.exe"
 rem Filezilla >= 3.41.2 have a problem which cannot set to local path via config/filezilla.xml
 REM set download_url_filezilla="https://download.filezilla-project.org/client/FileZilla_latest_win64.zip"
 set download_url_filezilla="https://download.filezilla-project.org/client/FileZilla_3.13.1_win64.zip"
-set download_url_notepad2="https://github.com/zufuliu/notepad2/releases/download/v4.19.04r2016/Notepad2_x64_v4.19.04r2016.zip"
+@REM set download_url_notepad2="https://github.com/zufuliu/notepad2/releases/download/v4.19.04r2016/Notepad2_x64_v4.19.04r2016.zip"
+set download_url_notepad2="https://github.com/zufuliu/notepad2/releases/download/v4.22.01.4056/Notepad2_ko_AVX2_v4.22.01r4056.zip"
 set download_url_gnuwin="https://www.dropbox.com/s/2q3x5o2wzug1hbc/gnuwin.zip?dl=1"
 set download_url_nginx="https://nginx.org/download/nginx-1.18.0.zip"
 
