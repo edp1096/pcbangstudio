@@ -118,9 +118,11 @@ rem gocache
 cd ..\gocache
 set "GOCACHE=%cd%"
 
+rem set "CGO_ENABLED=0"
+
 cd %VSC_ROOT%
 
-RunHiddenConsole gocode-gomod -s -cache
+rem RunHiddenConsole gocode-gomod -s -cache
 
 rem git ssl cert disable
 git config --system http.sslverify false
