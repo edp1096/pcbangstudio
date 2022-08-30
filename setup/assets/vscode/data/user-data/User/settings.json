@@ -6,7 +6,7 @@
             "startIn": "%workspace%"
         },
         {
-            "description": "NginX/PHP Start with XDebug - localhost:10080",
+            "description": "NginX/PHP Start with XDebug - localhost:2480",
             "executable": "nginx_start_with_xdebug.bat",
             "startIn": "%workspace%"
         },
