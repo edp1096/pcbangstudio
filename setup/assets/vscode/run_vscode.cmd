@@ -9,12 +9,11 @@ rem set "PATH=%cd%;%PATH%"
 
 rem Set again UserProfile, Appdata...
 cd ..\..
-set "HomePath=%cd%\user\home"
-set "UserProfile=%cd%\user\userprofile"
-set "AppData=%UserProfile%\AppData\Roaming"
-set "LocalAppData=%UserProfile%\AppData\Local"
-set "TEMP=%cd%\user\tmp"
-set "TMP=%cd%\user\tmp"
+set "HOME=%cd%\user\home"
+set "USERPROFILE=%cd%\user\home\userprofile"
+set "APPDATA=%cd%\user\home\AppData"
+@REM set "TEMP=%cd%\user\tmp"
+@REM set "TMP=%cd%\user\tmp"
 
 rmdir "%TMP%\VSCode Crashes" /s /q
 
@@ -127,7 +126,8 @@ rem RunHiddenConsole gocode-gomod -s -cache
 rem git ssl cert disable
 git config --system http.sslverify false
 
-.\bin\code.cmd --extensions-dir .\data\extension --user-data-dir .\data\user-data
+@REM .\bin\code.cmd --extensions-dir .\data\extension --user-data-dir .\data\user-data
+%SystemRoot%\SysWOW64\WindowsPowerShell\v1.0\powershell.exe -WindowStyle hidden "bin\code.cmd --reuse-window --extensions-dir data/extension --user-data-dir data/user-data"
 
 rem Remove vscode caches when exit
 %VSC_DRIVE%
@@ -143,8 +143,6 @@ rem rmdir %GOPATH%\pkg /s /q
 rem rmdir %GOPATH%\src /s /q
 
 del /q %HomePath%\*
-del /q %LocalAppData%\*
-for /d %%x in (%LocalAppData%\*) do @rd /s /q "%%x"
 del /q %AppData%\*
 for /d %%x in (%AppData%\*) do @rd /s /q "%%x"
 del /q %TMP%\*

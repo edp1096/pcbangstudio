@@ -39,7 +39,6 @@ set download_url_mingw="https://sourceforge.net/projects/mingw-w64/files/Toolcha
 @REM set download_url_golang="https://go.dev/dl/go1.17.3.windows-amd64.zip"
 For /f %%i in ('.\utils\curl.exe "https://go.dev/VERSION?m=text"') do set "download_url_golang=https://go.dev/dl/%%i.windows-amd64.zip"
 set download_url_nodejs="https://nodejs.org/dist/v16.16.0/node-v16.16.0-win-x64.zip"
-rem When PHP guys release new version, the path of before last version have changed to archive
 @REM set download_url_php="https://windows.php.net/downloads/releases/latest/php-7.4-nts-Win32-vc15-x64-latest.zip"
 set download_url_php="https://windows.php.net/downloads/releases/archives/php-7.4.29-Win32-vc15-x64.zip"
 @REM set download_url_xdebug="https://xdebug.org/files/php_xdebug-3.1.5-7.4-vc15-nts-x86_64.dll"
