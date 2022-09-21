@@ -47,7 +47,16 @@ After installation, just zip & unzip then use it at public windows pc
 ```
 
 ## Using webfont at editor(workbench) of vscode
-* <b>Do not run severally</b>
+* `ExecutionPolicy` should be set to `RemoteSigned` and unblock `ps1` files
+```powershell
+# Check
+ExecutionPolicy
+# Set as RemoteSigned
+Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+
+# Unblock ps1 files
+Unblock-File *.ps1
+```
 * Do following
     * Exit `vscode`
     * Run following
@@ -56,6 +65,7 @@ After installation, just zip & unzip then use it at public windows pc
     > set_webfont.cmd
     ```
     * Run `vscode`
+    * <b>Do not run severally</b>
 * This will set vscode to use `D2Coding ligature` webfont. If want other fonts like `FiraCode` or `CascadiaCode`, modify `set_webfont.cmd`
 * This will modify following files
     * @font-face - `%pcbangstudio_root%/tools/vscode/resources/app/out/vs/workbench/workbench.desktop.main.css`
