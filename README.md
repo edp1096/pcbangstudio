@@ -45,3 +45,19 @@ After installation, just zip & unzip then use it at public windows pc
 "update.mode": "none",
 "security.workspace.trust.enabled": false,
 ```
+
+## Using webfont
+* <b>Do not run severally</b>
+* Do following
+    * Exit `vscode`
+    * Run following
+    ```dos
+    > cd setup
+    > set_webfont.cmd
+    ```
+    * Run `vscode`
+* This will set vscode to use `D2Coding ligature` webfont. If want other fonts like `FiraCode`, modify `set_webfont.cmd`
+* This will modify following files
+    * @font-face - `%pcbangstudio_root%/tools/vscode/resources/app/out/vs/workbench/workbench.desktop.main.css`
+    * checksum - `%pcbangstudio_root%/tools/vscode/resources/app/product.json`
+* When meet the message `vscode is corrupted`, remove appended `@font-face` definition at `workbench.desktop.main.css` and run `set_webfont.cmd` again
