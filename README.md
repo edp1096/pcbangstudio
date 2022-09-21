@@ -46,7 +46,7 @@ After installation, just zip & unzip then use it at public windows pc
 "security.workspace.trust.enabled": false,
 ```
 
-## Using webfont
+## Using webfont at editor of vscode
 * <b>Do not run severally</b>
 * Do following
     * Exit `vscode`
