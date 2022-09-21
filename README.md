@@ -56,7 +56,7 @@ After installation, just zip & unzip then use it at public windows pc
     > set_webfont.cmd
     ```
     * Run `vscode`
-* This will set vscode to use `D2Coding ligature` webfont. If want other fonts like `FiraCode`, modify `set_webfont.cmd`
+* This will set vscode to use `D2Coding ligature` webfont. If want other fonts like `FiraCode` or `CascadiaCode`, modify `set_webfont.cmd`
 * This will modify following files
     * @font-face - `%pcbangstudio_root%/tools/vscode/resources/app/out/vs/workbench/workbench.desktop.main.css`
     * checksum - `%pcbangstudio_root%/tools/vscode/resources/app/product.json`
