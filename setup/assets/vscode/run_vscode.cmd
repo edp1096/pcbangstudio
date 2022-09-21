@@ -142,11 +142,11 @@ rem rmdir %GOPATH%\bin /s /q
 rem rmdir %GOPATH%\pkg /s /q
 rem rmdir %GOPATH%\src /s /q
 
-del /q %HomePath%\*
-del /q %AppData%\*
-for /d %%x in (%AppData%\*) do @rd /s /q "%%x"
-del /q %TMP%\*
-for /d %%x in (%TMP%\*) do @rd /s /q "%%x"
+del /q %HOME%\*
+del /q %APPDATA%\*
+for /d %%x in (%APPDATA%\*) do @rd /s /q "%%x"
+rem del /q %TMP%\*
+rem for /d %%x in (%TMP%\*) do @rd /s /q "%%x"
 
 go clean -cache
 
