@@ -10,7 +10,8 @@ rem set "PATH=%cd%;%PATH%"
 rem Set again UserProfile, Appdata...
 cd ..\..
 set "HOME=%cd%\user\home"
-set "USERPROFILE=%cd%\user\home\userprofile"
+@REM Makeshift until solve WSL problem - The system cannot find the path specified.
+@REM set "USERPROFILE=%cd%\user\home\userprofile"
 set "APPDATA=%cd%\user\home\AppData"
 @REM set "TEMP=%cd%\user\tmp"
 @REM set "TMP=%cd%\user\tmp"
