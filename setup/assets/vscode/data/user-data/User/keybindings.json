@@ -43,5 +43,9 @@
     {
         "key": "alt+f2",
         "command": "go.install.package"
+    },
+    {
+        "key": "shift+alt+b",
+        "command": "workbench.action.toggleActivityBarVisibility"
     }
 ]
