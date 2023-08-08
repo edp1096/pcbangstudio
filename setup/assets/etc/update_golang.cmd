@@ -9,7 +9,12 @@ cd ..\tools\langs
 
 rmdir go /s /q
 
-For /f %%i in ('..\utils\gnuwin\curl.exe "https://go.dev/VERSION?m=text"') do echo. && echo Download %%i && set "gover=https://go.dev/dl/%%i.windows-amd64.zip"
+@rem For /f %%i in ('..\utils\gnuwin\curl.exe "https://go.dev/VERSION?m=text"') do echo. && echo Download %%i && set "gover=https://go.dev/dl/%%i.windows-amd64.zip"
+for /f "tokens=1 delims=" %%i in ('..\utils\gnuwin\curl.exe "https://go.dev/VERSION?m=text"') do (
+    echo Download %%i
+    set "gover=https://go.dev/dl/%%i.windows-amd64.zip"
+    goto :next
+)
 
 ..\utils\gnuwin\curl.exe --progress-bar -Lo go.zip %gover%
 
