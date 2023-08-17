@@ -15,6 +15,7 @@ for /f "tokens=1 delims=" %%i in ('..\utils\gnuwin\curl.exe "https://go.dev/VERS
     set "gover=https://go.dev/dl/%%i.windows-amd64.zip"
     goto :next
 )
+:next
 
 ..\utils\gnuwin\curl.exe --progress-bar -Lo go.zip %gover%
 
