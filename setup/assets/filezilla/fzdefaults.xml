@@ -63,7 +63,7 @@
 <FileZilla3>
   <Settings>
     <Setting name="Config Location">./config/</Setting>
-    <Setting name="Kiosk mode">1</Setting>
+    <Setting name="Kiosk mode">0</Setting>
     <Setting name="Disable update check">1</Setting>
     <Setting name="Default editor">C:\utils\notepad2\Notepad2.exe</Setting>
   </Settings>
