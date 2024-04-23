@@ -17,18 +17,16 @@ set download_url_putty="https://the.earth.li/~sgtatham/putty/latest/w64/putty.zi
 REM PuTTYtray - feature for saving session to file
 set download_url_puttytray="https://puttytray.goeswhere.com/download/putty.exe"
 
-rem Filezilla >= 3.41.2 have a problem which cannot set to local path via config/filezilla.xml
-REM set download_url_filezilla="https://download.filezilla-project.org/client/FileZilla_latest_win64.zip"
-set download_url_filezilla="https://download.filezilla-project.org/client/FileZilla_3.13.1_win64.zip"
+set download_url_filezilla="https://download.filezilla-project.org/client/FileZilla_3.67.0_win64.zip"
 @REM set download_url_notepad2="https://github.com/zufuliu/notepad2/releases/download/v4.19.04r2016/Notepad2_x64_v4.19.04r2016.zip"
-set download_url_notepad2="https://github.com/zufuliu/notepad2/releases/download/v4.22.01.4056/Notepad2_ko_AVX2_v4.22.01r4056.zip"
+set download_url_notepad2="https://github.com/zufuliu/notepad2/releases/download/v4.24.03r5146/Notepad2_en_AVX2_v4.24.03r5146.zip"
 set download_url_gnuwin="https://www.dropbox.com/s/2q3x5o2wzug1hbc/gnuwin.zip?dl=1"
 set download_url_nginx="https://nginx.org/download/nginx-1.18.0.zip"
 
 REM set download_url_mariadb="https://downloads.mariadb.org/interstitial/mariadb-10.5.12/winx64-packages/mariadb-10.5.12-winx64.zip"
-set download_url_mariadb="https://archive.mariadb.org/mariadb-10.6.4/winx64-packages/mariadb-10.6.4-winx64.zip"
+set download_url_mariadb="https://archive.mariadb.org/mariadb-10.6.17/winx64-packages/mariadb-10.6.17-winx64.zip"
 REM set download_url_pgsql="https://get.enterprisedb.com/postgresql/postgresql-12.3-2-windows-x64-binaries.zip"
-set download_url_pgsql="https://get.enterprisedb.com/postgresql/postgresql-13.1-1-windows-x64-binaries.zip"
+set download_url_pgsql="https://get.enterprisedb.com/postgresql/postgresql-13.14-1-windows-x64-binaries.zip"
 
 REM set download_url_mingw="https://github.com/brechtsanders/winlibs_mingw/releases/download/10.2.0-11.0.0-8.0.0-r5/winlibs-x86_64-posix-seh-gcc-10.2.0-llvm-11.0.0-mingw-w64-8.0.0-r5.7z"
 REM set download_url_mingw="https://github.com/brechtsanders/winlibs_mingw/releases/download/10.2.0-11.0.0-8.0.0-r5/winlibs-x86_64-posix-seh-gcc-10.2.0-mingw-w64-8.0.0-r5.7z"
@@ -37,15 +35,14 @@ set download_url_mingw="https://sourceforge.net/projects/mingw-w64/files/Toolcha
 
 @REM Go latest stable release
 @REM set download_url_golang="https://go.dev/dl/go1.17.3.windows-amd64.zip"
-For /f %%i in ('.\utils\curl.exe "https://go.dev/VERSION?m=text"') do set "download_url_golang=https://go.dev/dl/%%i.windows-amd64.zip"
-set download_url_nodejs="https://nodejs.org/dist/v16.16.0/node-v16.16.0-win-x64.zip"
-@REM set download_url_php="https://windows.php.net/downloads/releases/latest/php-7.4-nts-Win32-vc15-x64-latest.zip"
-set download_url_php="https://windows.php.net/downloads/releases/archives/php-7.4.29-Win32-vc15-x64.zip"
-@REM set download_url_xdebug="https://xdebug.org/files/php_xdebug-3.1.5-7.4-vc15-nts-x86_64.dll"
-set download_url_xdebug="https://xdebug.org/files/php_xdebug-2.9.6-7.4-vc15-nts-x86_64.dll"
+For /f "tokens=1 delims=" %%i in ('.\utils\curl.exe "https://go.dev/VERSION?m=text"') do ( set "download_url_golang=https://go.dev/dl/%%i.windows-amd64.zip" )
+set download_url_nodejs="https://nodejs.org/dist/v18.20.2/node-v18.20.2-win-x64.zip"
+set download_url_php="https://windows.php.net/downloads/releases/archives/php-7.4.29-nts-Win32-vc15-x64.zip"
+set download_url_xdebug="https://xdebug.org/files/php_xdebug-3.1.6-7.4-vc15-nts-x86_64.dll"
 REM set download_url_python="https://www.dropbox.com/s/sjlvd69abjdh02x/python354.7z?dl=1"
 set download_url_python="https://www.dropbox.com/s/2v6i1pskojhh1sk/python373.7z?dl=1"
-set download_url_cmake="https://github.com/Kitware/CMake/releases/download/v3.19.3/cmake-3.19.3-win64-x64.zip"
+@REM set download_url_cmake="https://github.com/Kitware/CMake/releases/download/v3.19.3/cmake-3.19.3-win64-x64.zip"
+set download_url_cmake="https://github.com/Kitware/CMake/releases/download/v3.29.2/cmake-3.29.2-windows-x86_64.zip"
 
 @REM Cannot install extensions with Code.exe version > v1.61.2
 @REM set download_url_vscode="https://update.code.visualstudio.com/1.61.2/win32-x64-archive/stable"
@@ -507,9 +504,6 @@ echo ### settings-cycler
 RunHiddenConsole .\bin\code.cmd --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension hoovercj.vscode-settings-cycler
 echo ### icons
 RunHiddenConsole .\bin\code.cmd --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension vscode-icons-team.vscode-icons
-
-echo ### GitHub copilot
-RunHiddenConsole .\bin\code.cmd --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension GitHub.copilot
 
 
 echo.
