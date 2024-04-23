@@ -7,10 +7,9 @@ set silent7z=-bso0
 rem set silentcurl=-s
 set silentcurl=--progress-bar
 
-rem set download_url_git="https://github.com/git-for-windows/git/releases/download/v2.21.0.windows.1/PortableGit-2.21.0-64-bit.7z.exe"
-rem Use MinGit-busybox instead above
-set download_url_git="https://github.com/git-for-windows/git/releases/download/v2.28.0.windows.1/MinGit-2.28.0-busybox-64-bit.zip"
-set download_url_heidisql="https://www.heidisql.com/downloads/releases/HeidiSQL_11.1_64_Portable.zip"
+@REM Git for windows
+set download_url_git="https://github.com/git-for-windows/git/releases/download/v2.44.0.windows.1/MinGit-2.44.0-busybox-64-bit.zip"
+set download_url_heidisql="https://www.heidisql.com/downloads/releases/HeidiSQL_12.6_64_Portable.zip"
 
 REM PuTTY
 set download_url_putty="https://the.earth.li/~sgtatham/putty/latest/w64/putty.zip"
@@ -28,14 +27,17 @@ set download_url_mariadb="https://archive.mariadb.org/mariadb-10.6.17/winx64-pac
 REM set download_url_pgsql="https://get.enterprisedb.com/postgresql/postgresql-12.3-2-windows-x64-binaries.zip"
 set download_url_pgsql="https://get.enterprisedb.com/postgresql/postgresql-13.14-1-windows-x64-binaries.zip"
 
-REM set download_url_mingw="https://github.com/brechtsanders/winlibs_mingw/releases/download/10.2.0-11.0.0-8.0.0-r5/winlibs-x86_64-posix-seh-gcc-10.2.0-llvm-11.0.0-mingw-w64-8.0.0-r5.7z"
-REM set download_url_mingw="https://github.com/brechtsanders/winlibs_mingw/releases/download/10.2.0-11.0.0-8.0.0-r5/winlibs-x86_64-posix-seh-gcc-10.2.0-mingw-w64-8.0.0-r5.7z"
-REM set download_url_mingw="https://sourceforge.mirrorservice.org/m/mi/mingw-w64/Toolchains%%20targetting%%20Win64/Personal%%20Builds/mingw-builds/8.1.0/threads-posix/seh/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z"
-set download_url_mingw="https://sourceforge.net/projects/mingw-w64/files/Toolchains targetting Win64/Personal Builds/mingw-builds/8.1.0/threads-posix/seh/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z/download"
+@REM set download_url_mingw="https://sourceforge.mirrorservice.org/m/mi/mingw-w64/Toolchains%%20targetting%%20Win64/Personal%%20Builds/mingw-builds/8.1.0/threads-posix/seh/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z"
+@REM set download_url_mingw="https://sourceforge.net/projects/mingw-w64/files/Toolchains targetting Win64/Personal Builds/mingw-builds/8.1.0/threads-posix/seh/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z/download"
+set download_url_mingw="https://github.com/brechtsanders/winlibs_mingw/releases/download/13.2.0posix-18.1.3-11.0.1-msvcrt-r7/winlibs-x86_64-posix-seh-gcc-13.2.0-mingw-w64msvcrt-11.0.1-r7.7z"
 
 @REM Go latest stable release
 @REM set download_url_golang="https://go.dev/dl/go1.17.3.windows-amd64.zip"
-For /f "tokens=1 delims=" %%i in ('.\utils\curl.exe "https://go.dev/VERSION?m=text"') do ( set "download_url_golang=https://go.dev/dl/%%i.windows-amd64.zip" )
+For /f "tokens=1 delims=" %%i in ('.\utils\curl.exe "https://go.dev/VERSION?m=text"') do (
+  set "download_url_golang=https://go.dev/dl/%%i.windows-amd64.zip"
+  goto :next
+)
+:next
 set download_url_nodejs="https://nodejs.org/dist/v18.20.2/node-v18.20.2-win-x64.zip"
 set download_url_php="https://windows.php.net/downloads/releases/archives/php-7.4.29-nts-Win32-vc15-x64.zip"
 set download_url_xdebug="https://xdebug.org/files/php_xdebug-3.1.6-7.4-vc15-nts-x86_64.dll"
@@ -159,7 +161,7 @@ if defined do_nodejs (
   copy %pcbangstudio_root%\setup\assets\nodejs\etc\npmrc .\nodejs\etc /y 1>NUL
 )
 
-echo ### PHP
+echo ### Php
 if exist %cd%\php\php.zip (
   set do_php=1
   if exist %cd%\php rmdir php /q/s
