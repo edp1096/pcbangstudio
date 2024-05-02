@@ -244,7 +244,6 @@
     "files.eol": "\n",
     "gopls": {
         "usePlaceholders": true, // add parameter placeholders when completing a function
-        "experimentalWorkspaceModule": true
     },
     "go.languageServerFlags": [],
     "go.docsTool": "gogetdoc",
