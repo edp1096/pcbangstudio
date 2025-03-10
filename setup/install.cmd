@@ -16,7 +16,7 @@ set download_url_putty="https://the.earth.li/~sgtatham/putty/latest/w64/putty.zi
 REM PuTTYtray - feature for saving session to file
 set download_url_puttytray="https://puttytray.goeswhere.com/download/putty.exe"
 
-set download_url_filezilla="https://download.filezilla-project.org/client/FileZilla_3.67.0_win64.zip"
+set download_url_filezilla="https://dl4.cdn.filezilla-project.org/client/FileZilla_3.68.1_win64.zip?h=FP0dBB_hTb0kTQsvtyDf6A&x=1741576406"
 @REM set download_url_notepad2="https://github.com/zufuliu/notepad2/releases/download/v4.19.04r2016/Notepad2_x64_v4.19.04r2016.zip"
 set download_url_notepad2="https://github.com/zufuliu/notepad2/releases/download/v4.24.03r5146/Notepad2_en_AVX2_v4.24.03r5146.zip"
 set download_url_gnuwin="https://www.dropbox.com/s/2q3x5o2wzug1hbc/gnuwin.zip?dl=1"
